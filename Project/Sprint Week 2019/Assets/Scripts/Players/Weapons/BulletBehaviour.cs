@@ -10,12 +10,14 @@ public class BulletBehaviour : MonoBehaviour, ObjectInterface
         Debug.Log("Bullet Recycled");
         this.transform.localScale = Vector3.zero;
         timer = startTime;
+        StartCoroutine(CountDown());
     }
 
     // Start is called before the first frame update
     void Start()
     {
         timer = startTime;
+      
     }
 
     // Update is called once per frame
