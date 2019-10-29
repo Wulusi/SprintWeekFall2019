@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'P3
+  m_Text: 'P1
 
 '
 --- !u!1 &1093350978
@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a7fef57d229c54cb07c724fa7c1d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIndex: 2
+  playerIndex: 1
   rb: {fileID: 24547735543309741}
   moveDir: {x: 0, y: 0}
   lastMoveDir: {x: 0, y: 0}
@@ -322,11 +322,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a98a2089aac6be4a861528822ffc2e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIndex: 2
+  playerIndex: 1
   triggerIndex: {x: 0, y: 0}
   shot: {fileID: 2615823765217977266, guid: 61e128129c47f8c4eb6b8c531b50b3ca, type: 3}
   firedShot: {fileID: 0}
   hasShot: 0
+  weaponParams: {fileID: 11400000, guid: 796fcccf0bef0524e80961c29cab45a6, type: 2}
   localScale: 0
   triggerFloat: 0
   maxShotSize: 2
