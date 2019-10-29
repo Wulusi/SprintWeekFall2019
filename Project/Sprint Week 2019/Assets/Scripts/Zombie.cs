@@ -8,10 +8,24 @@ public class Zombie : MonoBehaviour
     public GameObject targetPoint;
     public float walkSpd;
     public Rigidbody2D rb;
+    public float damageVal;
 
     private void Update()
     {
         dirToWalk = targetPoint.transform.position - transform.position;
-        rb.velocity = dirToWalk.normalized * walkSpd;
+        rb.velocity = Vector2.Lerp(rb.velocity,dirToWalk.normalized * walkSpd,0.1f);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Players"))
+        {
+
+        }
+        else if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Bases")|| collision.collider.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
+        {
+            collision.collider.GetComponent<Health>().TakeDamage(damageVal);
+        }
+        rb.AddForce((transform.position - collision.collider.transform.position), ForceMode2D.Impulse);
     }
 }
