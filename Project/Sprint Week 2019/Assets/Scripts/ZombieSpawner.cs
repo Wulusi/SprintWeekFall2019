@@ -39,6 +39,7 @@ public class ZombieSpawner : MonoBehaviour
                     if (Vector2.Distance(newZombie.transform.position, baseTargets[i].transform.position) < shortestDistance)
                     {
                         indexWithShortestDistance = i;
+                        shortestDistance = Vector2.Distance(newZombie.transform.position, baseTargets[i].transform.position);
                     }
                 }
 

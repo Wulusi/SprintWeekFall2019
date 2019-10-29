@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour
     Vector3 offset;
 
     [SerializeField]
-    Transform[] targets;
+    List<Transform> targets;
 
     [SerializeField]
     float smoothing = 1f;
@@ -33,20 +33,37 @@ public class CameraMovement : MonoBehaviour
 
     void LateUpdate()
     {
+        CheckTargetsExist();
         MoveCamera();
         ZoomCamera();
+    }
+
+    void CheckTargetsExist()
+    {
+        bool foundError = false;
+        do
+        {
+            for (int i = 0; i < targets.Count; i++)
+            {
+                if (targets[i] == null)
+                {
+                    targets.RemoveAt(i);
+                }
+            }
+        }
+        while (foundError);
     }
 
     void MoveCamera()
     {
         avgPos = Vector3.zero;
-        for (int i = 0; i < targets.Length; i++)
+        for (int i = 0; i < targets.Count; i++)
         {
             avgPos += targets[i].position;
         }
 
-        if (targets.Length > 0)
-            avgPos /= targets.Length;
+        if (targets.Count > 0)
+            avgPos /= targets.Count;
         else return;
 
         avgPos.z = -10;
@@ -70,7 +87,7 @@ public class CameraMovement : MonoBehaviour
         float size = 0f;
 
         // Go through all the targets...
-        for (int i = 0; i < targets.Length; i++)
+        for (int i = 0; i < targets.Count; i++)
         {
 
             // Otherwise, find the position of the target in the camera's local space.
