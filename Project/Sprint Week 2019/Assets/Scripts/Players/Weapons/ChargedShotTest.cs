@@ -56,7 +56,7 @@ public class ChargedShotTest : MonoBehaviour
         {
             if (!hasShot)
             {
-                firedShot = Instantiate(shot);
+                firedShot = PoolManager.Instance.SpawnFromPool(shot.name, transform.position + transform.up, Quaternion.identity);
                 hasShot = true;
                 firedShot.transform.position = transform.position + transform.up;
             }

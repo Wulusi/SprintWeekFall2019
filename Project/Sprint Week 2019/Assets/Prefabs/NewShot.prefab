@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4237718671944597107}
   - component: {fileID: 4237718671944597106}
   - component: {fileID: 4237718671944597117}
+  - component: {fileID: 3939804530850442990}
+  - component: {fileID: 8047901059374896314}
   m_Layer: 0
   m_Name: NewShot
   m_TagString: Untagged
@@ -102,3 +104,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &3939804530850442990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4237718671944597116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b19bd3d3f70724b84fae5e91e6ce9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmgVal: 1
+--- !u!114 &8047901059374896314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4237718671944597116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b2bc89e38b2eb4aa5737333f88ad6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  startTime: 5
