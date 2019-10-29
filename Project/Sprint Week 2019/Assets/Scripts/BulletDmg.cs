@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class BulletDmg : MonoBehaviour
 {
+    public Element elementType;
     public float dmgVal;
     List<string> tagsToSearch;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (tagsToSearch.Contains(collision.collider.tag)) {
-            collision.collider.gameObject.GetComponent<Health>().TakeDamage(dmgVal);
+        if (collision.collider.gameObject.GetComponent<Health>()) {
+            collision.collider.gameObject.GetComponent<Health>().TakeDamage(dmgVal, elementType);
         }
     }
 }

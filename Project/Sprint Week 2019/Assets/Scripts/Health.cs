@@ -4,12 +4,25 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    public Element elementType;
+    public float maxHealth;
     public float currentHealth;
     public GameObject owner;
 
-    public void TakeDamage(float dmg)
+    public void TakeDamage(float dmg, Element type)
     {
-        currentHealth -= dmg;
+        if (elementType.vulnerableTo == type)
+        {
+            currentHealth -= dmg * 2;
+        }
+        else if (elementType.strongAgainst == type)
+        {
+            currentHealth -= dmg / 2;
+        }
+        else
+        {
+            currentHealth -= dmg;
+        }
         CheckDeath();
     }
 
