@@ -12,8 +12,31 @@ public class Zombie : MonoBehaviour
 
     private void Update()
     {
-        dirToWalk = targetPoint.transform.position - transform.position;
-        rb.velocity = Vector2.Lerp(rb.velocity,dirToWalk.normalized * walkSpd,0.1f);
+        if (targetPoint != null)
+        {
+            dirToWalk = targetPoint.transform.position - transform.position;
+            rb.velocity = Vector2.Lerp(rb.velocity, dirToWalk.normalized * walkSpd, 0.1f);
+        } else
+        {
+            GameObject[] allBasesLeft = GameObject.FindGameObjectsWithTag("Base");
+            if (allBasesLeft.Length == 0)
+            {
+                //players have lost
+            } else
+            {
+                int indexWithShortestDistance = 0;
+                float shortestDistance = Mathf.Infinity;
+                for (int i = 0; i < allBasesLeft.Length; i++)
+                {
+                    if (Vector2.Distance(transform.position, allBasesLeft[i].transform.position) < shortestDistance)
+                    {
+                        indexWithShortestDistance = i;
+                        shortestDistance = Vector2.Distance(transform.position, allBasesLeft[i].transform.position);
+                    }
+                }
+                targetPoint = allBasesLeft[indexWithShortestDistance];
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
