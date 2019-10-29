@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    float currentHealth;
-    GameObject owner;
+    public float currentHealth;
+    public GameObject owner;
 
     public void TakeDamage(float dmg)
     {
