@@ -13,7 +13,7 @@ public class ChargedShotTest : MonoBehaviour
     public sObj_WeaponParams weaponParams;
 
     [HideInInspector]
-    public float localScale, triggerFloat, maxShotSize, minShotSize, chargeSpeed, shotCoolDown, shotSpeed;
+    public float localScale, triggerFloat, maxShotSize, minShotSize, minShotThreshold, chargeSpeed, shotCoolDown, shotSpeed;
 
     public Transform barrel;
 
@@ -39,6 +39,7 @@ public class ChargedShotTest : MonoBehaviour
         chargeSpeed = weaponParams._chargeSpeed;
         shotCoolDown = weaponParams._shotCoolDown;
         shotSpeed = weaponParams._shotSpeed;
+        minShotThreshold = weaponParams._minShotThreshold;
         shot = weaponParams.playerShot;
     }
 
@@ -75,9 +76,11 @@ public class ChargedShotTest : MonoBehaviour
         {
             if (firedShot != null)
             {
+                firedShot.transform.position = transform.position + transform.up;
                 localScale -= (Time.deltaTime);
                 localScale = Mathf.Clamp(localScale, minShotSize, maxShotSize);
                 firedShot.transform.localScale = new Vector3(localScale, localScale, localScale);
+                ShootShot(localScale, firedShot);
             }
         }
     }
@@ -90,10 +93,30 @@ public class ChargedShotTest : MonoBehaviour
             shot.transform.localScale = new Vector3(localScale, localScale, localScale);
             shot.GetComponent<Rigidbody2D>().velocity = transform.up * shotSpeed;
             firedShot = null;
+
             if (firedShot == null)
             {
-
+                //Do nothing here
             }
+
+            StartCoroutine(CountDown());
+        }
+    }
+
+    void ShootShot(float shotSize, GameObject shot)
+    {
+        if (shotSize >= minShotThreshold)
+        {
+            hasShot = true;
+            shot.transform.localScale = new Vector3(localScale, localScale, localScale);
+            shot.GetComponent<Rigidbody2D>().velocity = transform.up * shotSpeed;
+            firedShot = null;
+
+            if (firedShot == null)
+            {
+                //Do nothing here
+            }
+
             StartCoroutine(CountDown());
         }
     }

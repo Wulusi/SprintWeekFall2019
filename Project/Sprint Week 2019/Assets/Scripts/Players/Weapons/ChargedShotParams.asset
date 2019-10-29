@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxShotSize: 10
   minShotSize: 0
-  chargeSpeed: 10
-  shotCoolDown: 0.2
+  chargeSpeed: 20
+  shotCoolDown: 0
   shotSpeed: 15
+  minShotThreshold: 3
   playerShot: {fileID: 4237718671944597116, guid: ba4179db532fe6f4985b16003dbf6d58,
     type: 3}

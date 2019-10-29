@@ -26,6 +26,10 @@ public class sObj_WeaponParams : ScriptableObject
     private float shotSpeed;
     public float _shotSpeed => shotSpeed;
 
+    [SerializeField]
+    private float minShotThreshold;
+    public float _minShotThreshold => minShotThreshold;
+
     public GameObject playerShot;
 
 }
