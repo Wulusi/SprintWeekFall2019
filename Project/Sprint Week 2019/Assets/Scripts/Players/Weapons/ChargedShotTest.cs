@@ -9,6 +9,10 @@ public class ChargedShotTest : MonoBehaviour
     public Vector2 triggerIndex;
     public GameObject shot, firedShot;
     public bool hasShot;
+
+    public sObj_WeaponParams weaponParams;
+
+    [HideInInspector]
     public float localScale, triggerFloat, maxShotSize, minShotSize, chargeSpeed, shotCoolDown, shotSpeed;
 
     public Transform barrel;
@@ -16,8 +20,7 @@ public class ChargedShotTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hasShot = false;
-        localScale = 0;
+        GetData();
     }
 
     // Update is called once per frame
@@ -26,6 +29,18 @@ public class ChargedShotTest : MonoBehaviour
         CheckInput();
         InflateObject();
     }
+
+    void GetData()
+    {
+        hasShot = false;
+        localScale = 0;
+        maxShotSize = weaponParams._maxShotSize;
+        minShotSize = weaponParams._minShotSize;
+        chargeSpeed = weaponParams._chargeSpeed;
+        shotCoolDown = weaponParams._shotCoolDown;
+        shotSpeed = weaponParams._shotSpeed;
+    }
+
 
     void CheckInput()
     {
