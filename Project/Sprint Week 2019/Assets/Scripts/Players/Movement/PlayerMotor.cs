@@ -50,7 +50,7 @@ public class PlayerMotor : MonoBehaviour
         }
 
         rb.velocity = lastMoveDir.normalized * currentSpeed;
-        transform.up = lastAimDir.normalized;
+        transform.LookAt(transform.position + (Vector3)lastAimDir.normalized,Vector3.up);
     }
 
     public void CheckInput()
