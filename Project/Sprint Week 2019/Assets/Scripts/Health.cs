@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour, ObjectInterface
 {
     public Element elementType;
     public float maxHealth;
@@ -32,5 +32,10 @@ public class Health : MonoBehaviour
         {
             Destroy(owner);
         }
+    }
+
+    public void OnObjectSpawn()
+    {
+        currentHealth = maxHealth;
     }
 }

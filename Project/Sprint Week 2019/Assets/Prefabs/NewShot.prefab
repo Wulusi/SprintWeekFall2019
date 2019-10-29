@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: {fileID: 11400000, guid: 7162764f0e054a64f8c23bd19e94757c, type: 2}
-  dmgVal: 1
+  dmgVal: 0.5
 --- !u!114 &8047901059374896314
 MonoBehaviour:
   m_ObjectHideFlags: 0

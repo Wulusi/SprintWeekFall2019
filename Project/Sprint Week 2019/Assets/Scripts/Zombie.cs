@@ -8,7 +8,7 @@ public class Zombie : MonoBehaviour
     public GameObject targetPoint;
     public float walkSpd;
     public Rigidbody2D rb;
-    public float damageVal;
+    public float damageVal, forcePushAmt;
 
     private void Update()
     {
@@ -49,6 +49,6 @@ public class Zombie : MonoBehaviour
         {
             collision.collider.GetComponent<Health>().TakeDamage(damageVal,gameObject.GetComponent<Health>().elementType);
         }
-        rb.AddForce((transform.position - collision.collider.transform.position), ForceMode2D.Impulse);
+        rb.AddForce((transform.position - collision.collider.transform.position) * forcePushAmt, ForceMode2D.Impulse);
     }
 }

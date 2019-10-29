@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: {fileID: 11400000, guid: 7162764f0e054a64f8c23bd19e94757c, type: 2}
-  maxHealth: 5
-  currentHealth: 5
+  maxHealth: 15
+  currentHealth: 15
   owner: {fileID: 1282958123816497461}
 --- !u!1001 &1813431632
 PrefabInstance:

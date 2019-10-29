@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using GamepadInput;
+using UnityEngine.UI;
 
 public class PlaceBarrier : MonoBehaviour
 {
 
     public GamePad.Index playerIndex;
     public Vector2 triggerIndex;
-    public GameObject shot, firedShot;
     public bool hasShot;
 
     public ObstacleSpawner obstacleSpawner;
 
-    public float triggerFloat;
+    public Image buildTimer;
+
+    public float triggerFloat, triggerAmt, triggerTimer, barrierCoolDown;
     // Start is called before the first frame update
     void Start()
     {
         obstacleSpawner = GetComponent<ObstacleSpawner>();
+        hasShot = false;
+        buildTimer.fillAmount = 0;
     }
 
     // Update is called once per frame
@@ -25,6 +29,7 @@ public class PlaceBarrier : MonoBehaviour
     {
         CheckInput();
         SpawnBarrier();
+        UpdateUI();
     }
 
     void CheckInput()
@@ -37,15 +42,40 @@ public class PlaceBarrier : MonoBehaviour
     {
         if (triggerFloat != 0)
         {
-            if (!hasShot)
+            triggerAmt += (Time.deltaTime * triggerFloat) / triggerTimer;
+            triggerAmt = Mathf.Clamp(triggerAmt, 0, 1);
+
+            if (!hasShot && triggerAmt >= 1f)
             {
                 obstacleSpawner.SpawnObstacle();
                 hasShot = true;
-            }
-            else
-            {
-
+                triggerAmt = 0;
+                buildTimer.fillAmount = 0;
+                StartCoroutine(CountDown());
             }
         }
+        else
+        {
+            triggerAmt -= (Time.deltaTime) / triggerTimer;
+          
+        }
+    }
+
+    void UpdateUI()
+    {
+        buildTimer.fillAmount = triggerAmt;
+    }
+
+    private IEnumerator CountDown()
+    {
+        float duration = barrierCoolDown;
+        float time = 0;
+
+        while (time <= duration)
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+        hasShot = false;
     }
 }
