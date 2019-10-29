@@ -50,7 +50,7 @@ public class PlayerMotor : MonoBehaviour
         }
 
         rb.velocity = lastMoveDir.normalized * currentSpeed;
-        transform.LookAt(transform.position + (Vector3)lastAimDir.normalized,Vector3.up);
+        transform.rotation = Quaternion.Euler(0,0,Mathf.Atan2(lastAimDir.normalized.y, lastAimDir.normalized.x));
     }
 
     public void CheckInput()
