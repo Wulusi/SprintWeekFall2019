@@ -39,6 +39,7 @@ public class ChargedShotTest : MonoBehaviour
         chargeSpeed = weaponParams._chargeSpeed;
         shotCoolDown = weaponParams._shotCoolDown;
         shotSpeed = weaponParams._shotSpeed;
+        shot = weaponParams.playerShot;
     }
 
 

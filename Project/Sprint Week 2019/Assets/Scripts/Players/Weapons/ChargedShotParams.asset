@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d198ea93be31104589340cea2ca848a, type: 3}
   m_Name: ChargedShotParams
   m_EditorClassIdentifier: 
-  maxShotSize: 0
+  maxShotSize: 10
   minShotSize: 0
-  chargeSpeed: 0
-  shotCoolDown: 0
-  shotSpeed: 0
-  playerShot: {fileID: 2615823765217977266, guid: 61e128129c47f8c4eb6b8c531b50b3ca,
+  chargeSpeed: 10
+  shotCoolDown: 0.2
+  shotSpeed: 15
+  playerShot: {fileID: 4237718671944597116, guid: ba4179db532fe6f4985b16003dbf6d58,
     type: 3}
