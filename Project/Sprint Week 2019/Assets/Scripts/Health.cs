@@ -48,17 +48,19 @@ public class Health : MonoBehaviour, ObjectInterface
     {
         transform.position = startPos;
 
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
+
         GetComponent<SpriteRenderer>().enabled = false;
         //GetComponent<PlayerMotor>().enabled = false;
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         GetComponent<BoxCollider2D>().enabled = false;
-        GetComponent<ChargedShotTest>().enabled = false;
+        if (GetComponent<ChargedShotTest>() != null) GetComponent<ChargedShotTest>().enabled = false;
         GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         GetComponent<Rigidbody2D>().Sleep();
-        for (int i = 0; i<transform.childCount; i++)
-        {
-            transform.GetChild(i).gameObject.SetActive(false);
-        }
+        
 
         float timer = 0;
 
@@ -70,7 +72,7 @@ public class Health : MonoBehaviour, ObjectInterface
 
         GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<BoxCollider2D>().enabled = true;
-        GetComponent<ChargedShotTest>().enabled = true;
+        if (GetComponent<ChargedShotTest>() != null) GetComponent<ChargedShotTest>().enabled = true;
         GetComponent<Rigidbody2D>().WakeUp();
 
         for (int i = 0; i < transform.childCount; i++)

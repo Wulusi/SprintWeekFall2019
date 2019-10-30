@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2887254870571583917}
   - component: {fileID: 2887254870571583918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3209026215713152155}
   - component: {fileID: 8041201838985643525}
   - component: {fileID: 285901712907966845}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AtkPlayer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,15 +230,17 @@ MonoBehaviour:
   firedShot: {fileID: 0}
   hasShot: 0
   autoFire: 0
+  currentElement: {fileID: 0}
   weaponParams: {fileID: 11400000, guid: 796fcccf0bef0524e80961c29cab45a6, type: 2}
   localScale: 0
-  triggerFloat: 0
   maxShotSize: 2
   minShotSize: 0
   minShotThreshold: 0
   chargeSpeed: 10
   shotCoolDown: 0.5
   shotSpeed: 15
+  triggerFloatRight: 0
+  triggerFloatLeft: 0
   barrel: {fileID: 2887254870571583917}
 --- !u!114 &8041201838985643525
 MonoBehaviour:
@@ -296,7 +298,7 @@ GameObject:
   - component: {fileID: 2902184068337857809}
   - component: {fileID: 2902184068337857808}
   - component: {fileID: 3447391909401042145}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +409,7 @@ GameObject:
   - component: {fileID: 2902184069844150326}
   - component: {fileID: 2902184069844150325}
   - component: {fileID: 4115367412900842583}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
