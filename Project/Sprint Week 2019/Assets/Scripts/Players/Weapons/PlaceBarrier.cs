@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class PlaceBarrier : MonoBehaviour
 {
-
     public GamePad.Index playerIndex;
     public Vector2 triggerIndex;
     public bool hasShot;
@@ -15,11 +14,14 @@ public class PlaceBarrier : MonoBehaviour
 
     public Image buildTimer;
 
+    public GridSystem gridSystem;
+
     public float triggerFloat, triggerAmt, triggerTimer, barrierCoolDown;
     // Start is called before the first frame update
     void Start()
     {
         obstacleSpawner = GetComponent<ObstacleSpawner>();
+        gridSystem = GridSystem.Instance;
         hasShot = false;
         buildTimer.fillAmount = 0;
     }
@@ -57,7 +59,6 @@ public class PlaceBarrier : MonoBehaviour
         else
         {
             triggerAmt -= (Time.deltaTime) / triggerTimer;
-          
         }
     }
 

@@ -9,11 +9,13 @@ public class ChargedShotTest : MonoBehaviour
     public Vector2 triggerIndex;
     public GameObject shot, firedShot;
     public bool hasShot, autoFire;
-
+    public Element currentElement;
     public sObj_WeaponParams weaponParams;
 
     [HideInInspector]
-    public float localScale, triggerFloat, maxShotSize, minShotSize, minShotThreshold, chargeSpeed, shotCoolDown, shotSpeed;
+    public float localScale, maxShotSize, minShotSize, minShotThreshold, chargeSpeed, shotCoolDown, shotSpeed;
+
+    public float triggerFloatRight, triggerFloatLeft;
 
     public Transform barrel;
 
@@ -46,13 +48,50 @@ public class ChargedShotTest : MonoBehaviour
 
     void CheckInput()
     {
-        triggerFloat = GamePad.GetTrigger(GamePad.Trigger.RightTrigger, playerIndex);
+        triggerFloatRight = GamePad.GetTrigger(GamePad.Trigger.RightTrigger, playerIndex);
+        triggerFloatLeft = GamePad.GetTrigger(GamePad.Trigger.LeftTrigger, playerIndex);
+        Debug.Log("LeftTriggerFloat is " + triggerFloatLeft);
     }
 
     void InflateObject()
 
     {
-        if (triggerFloat != 0)
+        if (triggerFloatRight != 0 && triggerFloatLeft <= 0)
+        {
+            if (!hasShot)
+            {
+                firedShot = PoolManager.Instance.SpawnFromPool(shot.name, transform.position + transform.up, Quaternion.identity);
+                firedShot.GetComponent<BulletDmg>().elementType = currentElement;
+                hasShot = true;
+                firedShot.transform.position = transform.position + transform.up;
+            }
+            else
+            {
+                if (firedShot != null)
+                {
+                    firedShot.transform.position = transform.position + transform.up;
+                    localScale += (Time.deltaTime * triggerFloatRight * chargeSpeed);
+                    localScale = Mathf.Clamp(localScale, minShotSize, maxShotSize);
+                    firedShot.transform.localScale = new Vector3(localScale, localScale, localScale);
+                    ShootChargedShot(localScale, firedShot);
+                }
+
+            }
+        }
+        else
+        {
+            if (firedShot != null)
+            {
+                firedShot.transform.position = transform.position + transform.up;
+                localScale -= (Time.deltaTime);
+                localScale = Mathf.Clamp(localScale, minShotSize, maxShotSize);
+                firedShot.transform.localScale = new Vector3(localScale, localScale, localScale);
+                ShootShot(localScale, firedShot);
+
+            }
+        }
+
+        if (triggerFloatLeft != 0 && triggerFloatRight <= 0)
         {
             if (!hasShot)
             {
@@ -65,37 +104,16 @@ public class ChargedShotTest : MonoBehaviour
                 if (firedShot != null)
                 {
                     firedShot.transform.position = transform.position + transform.up;
-                    localScale += (Time.deltaTime * triggerFloat * chargeSpeed);
+                    localScale += (Time.deltaTime * triggerFloatLeft * chargeSpeed);
                     localScale = Mathf.Clamp(localScale, minShotSize, maxShotSize);
                     firedShot.transform.localScale = new Vector3(localScale, localScale, localScale);
-                    ShootChargedShot(localScale, firedShot);
-                }
-
-
-                if (firedShot != null && autoFire)
-                {
-                    firedShot.transform.position = transform.position + transform.up;
-                    localScale += (Time.deltaTime * triggerFloat * chargeSpeed);
-                    localScale = Mathf.Clamp(localScale, minShotSize, maxShotSize);
-                    firedShot.transform.localScale = new Vector3(localScale, localScale, localScale);
+                    StartCoroutine(CommenceAutoFire(0.1f));
                     ShootShot(localScale, firedShot);
                 }
             }
         }
-        else
-        {
-            if (firedShot != null)
-            {
-                firedShot.transform.position = transform.position + transform.up;
-                localScale -= (Time.deltaTime);
-                localScale = Mathf.Clamp(localScale, minShotSize, maxShotSize);
-                firedShot.transform.localScale = new Vector3(localScale, localScale, localScale);
-                ShootShot(localScale, firedShot);
-            
-            }
-        }
 
-        if (triggerFloat <= 0)
+        if (triggerFloatLeft <= 0)
         {
             autoFire = false;
             StopCoroutine(CommenceAutoFire(0f));
@@ -107,10 +125,9 @@ public class ChargedShotTest : MonoBehaviour
         if (shotSize >= maxShotSize)
         {
             shot.transform.localScale = new Vector3(localScale, localScale, localScale);
-            StartCoroutine(CommenceAutoFire(5f));
 
             //If the trigger was released
-            if (triggerFloat <= 0)
+            if (triggerFloatRight <= 0)
             {
                 hasShot = true;
                 shot.GetComponent<Rigidbody2D>().velocity = transform.up * shotSpeed;

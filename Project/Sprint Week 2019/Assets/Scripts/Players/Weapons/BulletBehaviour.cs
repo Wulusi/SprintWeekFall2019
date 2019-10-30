@@ -7,6 +7,9 @@ public class BulletBehaviour : MonoBehaviour, ObjectInterface
     public float timer, startTime, shrinkSpeed;
 
     public bool startShrink;
+
+    [HideInInspector]
+    public Rigidbody2D _rb;
     public void OnObjectSpawn()
     {
         Debug.Log("Bullet Recycled");
@@ -57,5 +60,11 @@ public class BulletBehaviour : MonoBehaviour, ObjectInterface
         {
             this.transform.localScale -= Vector3.one * Time.deltaTime * shrinkSpeed;
         }
+    }
+
+    private void OnDisable()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+        _rb.velocity = Vector2.zero;
     }
 }
