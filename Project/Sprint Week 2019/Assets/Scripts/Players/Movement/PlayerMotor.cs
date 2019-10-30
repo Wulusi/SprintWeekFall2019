@@ -49,7 +49,8 @@ public class PlayerMotor : MonoBehaviour
             lastAimDir = aimDir;
         }
 
-        rb.velocity = lastMoveDir.normalized * currentSpeed;
+        //rb.velocity = lastMoveDir.normalized * currentSpeed;
+        rb.velocity = Vector2.Lerp(rb.velocity, lastMoveDir.normalized * currentSpeed, 0.1f);
         transform.rotation = Quaternion.Euler(0,0, - Mathf.Atan2(lastAimDir.normalized.x, lastAimDir.normalized.y) * Mathf.Rad2Deg);
     }
 

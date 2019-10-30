@@ -51,7 +51,8 @@ public class Zombie : MonoBehaviour
     {
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Players"))
         {
-
+            collision.collider.GetComponent<Health>().TakeDamage(damageVal, gameObject.GetComponent<Health>().elementType);
+            collision.collider.GetComponent<Rigidbody2D>().AddForce((collision.transform.position - transform.position) * forcePushAmt, ForceMode2D.Impulse);
         }
         else if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Bases") || collision.collider.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
         {
