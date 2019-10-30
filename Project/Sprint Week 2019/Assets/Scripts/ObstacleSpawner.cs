@@ -37,6 +37,7 @@ public class ObstacleSpawner : MonoBehaviour
                 //Find the nearest point for the newly spawned obstacle/resource generator
                 newObstacle.transform.position = new Vector3(Mathf.Round(transform.position.x) + 0.5f, Mathf.Round(transform.position.y) + 0.5f);
 
+                //OneTwoThreeFour
                 //newObstacle.transform.position = new Vector3(DetermineNearestDot().transform.position.x, DetermineNearestDot().transform.position.y);
                 newObstacle.GetComponent<Obstacle>().owner = this;
                 activeObstacles.Add(newObstacle);
