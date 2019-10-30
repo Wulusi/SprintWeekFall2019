@@ -9,7 +9,7 @@ public class ChargedShotTest : MonoBehaviour
     public Vector2 triggerIndex;
     public GameObject shot, firedShot;
     public bool hasShot, autoFire;
-
+    public Element currentElement;
     public sObj_WeaponParams weaponParams;
 
     [HideInInspector]
@@ -57,6 +57,7 @@ public class ChargedShotTest : MonoBehaviour
             if (!hasShot)
             {
                 firedShot = PoolManager.Instance.SpawnFromPool(shot.name, transform.position + transform.up, Quaternion.identity);
+                firedShot.GetComponent<BulletDmg>().elementType = currentElement;
                 hasShot = true;
                 firedShot.transform.position = transform.position + transform.up;
             }
