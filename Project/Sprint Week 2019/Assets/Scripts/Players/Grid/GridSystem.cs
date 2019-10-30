@@ -8,6 +8,15 @@ public class GridSystem : MonoBehaviour
     public float gridHeight, gridWidth;
    
     public GameObject gridDot;
+
+    public List<Transform> gridLocations = new List<Transform>();
+
+    public static GridSystem Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +36,8 @@ public class GridSystem : MonoBehaviour
             for (int j = 0; j < gridWidth; j++)
             {
                 GameObject spawnedDot = Instantiate(gridDot);
-                spawnedDot.transform.position = new Vector3(i * gridWidth * 0.5f, j * gridHeight * 0.5f);
+                spawnedDot.transform.position = new Vector3(i + 0.5f , j + 0.5f);
+                gridLocations.Add(spawnedDot.transform);
             }
         }
     }
