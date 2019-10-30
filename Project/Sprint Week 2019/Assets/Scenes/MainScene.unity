@@ -239,6 +239,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AtkPlayer1
       objectReference: {fileID: 0}
+    - target: {fileID: 2887254870734219000, guid: aeee549be5a087547b7d51043d3b72ff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2887254870734219003, guid: aeee549be5a087547b7d51043d3b72ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -303,6 +308,21 @@ PrefabInstance:
         type: 3}
       propertyPath: playerIndex
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887254870571583916, guid: aeee549be5a087547b7d51043d3b72ff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902184068337857814, guid: aeee549be5a087547b7d51043d3b72ff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902184069844150283, guid: aeee549be5a087547b7d51043d3b72ff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeee549be5a087547b7d51043d3b72ff, type: 3}
@@ -693,6 +713,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefenderPlayer2
       objectReference: {fileID: 0}
+    - target: {fileID: 6389515060962737080, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6389515060962737083, guid: 45ee159694e505a4fa400976f37df60b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -777,6 +802,25 @@ PrefabInstance:
         type: 3}
       propertyPath: playerIndex
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389515061336970476, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411762548366075990, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 745915479, guid: 45ee159694e505a4fa400976f37df60b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411762549285172555, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45ee159694e505a4fa400976f37df60b, type: 3}
@@ -1340,6 +1384,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DefenderPlayer2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6389515060962737080, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6389515060962737083, guid: 45ee159694e505a4fa400976f37df60b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1405,6 +1454,25 @@ PrefabInstance:
       propertyPath: playerIndex
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6389515061336970476, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411762548366075990, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 745915479, guid: 45ee159694e505a4fa400976f37df60b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411762549285172555, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45ee159694e505a4fa400976f37df60b, type: 3}
 --- !u!1001 &2008264610
@@ -1423,6 +1491,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887254870734219000, guid: aeee549be5a087547b7d51043d3b72ff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2887254870734219003, guid: aeee549be5a087547b7d51043d3b72ff,
         type: 3}
@@ -1488,6 +1561,21 @@ PrefabInstance:
         type: 3}
       propertyPath: playerIndex
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887254870571583916, guid: aeee549be5a087547b7d51043d3b72ff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902184068337857814, guid: aeee549be5a087547b7d51043d3b72ff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902184069844150283, guid: aeee549be5a087547b7d51043d3b72ff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeee549be5a087547b7d51043d3b72ff, type: 3}
@@ -1680,7 +1768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105406034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 7.77, y: 4.71, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1777,6 +1865,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401023278991024844, guid: c528419b18354554b95c4f4155400c44,
+        type: 3}
+      propertyPath: gridWidth
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401023278991024844, guid: c528419b18354554b95c4f4155400c44,
+        type: 3}
+      propertyPath: gridHeight
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c528419b18354554b95c4f4155400c44, type: 3}

@@ -31,9 +31,9 @@ public class GridSystem : MonoBehaviour
 
     void BuildGrid()
     {
-        for (int i = 0; i < gridHeight; i++)
+        for (int i = 0; i < gridWidth; i++)
         {
-            for (int j = 0; j < gridWidth; j++)
+            for (int j = 0; j < gridHeight; j++)
             {
                 GameObject spawnedDot = Instantiate(gridDot);
                 spawnedDot.transform.position = new Vector3(i + 0.5f , j + 0.5f);
