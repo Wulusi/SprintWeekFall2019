@@ -11,6 +11,10 @@ public class ZombieSpawner : MonoBehaviour
     public float minTimeToSpawn;
     public float maxTimeToSpawn;
     float spawnTimer;
+    public Vector2[] pathOne;
+    public Vector2[] pathTwo;
+    public Vector2[] pathThree;
+    public Vector2[] pathFour;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,25 +33,41 @@ public class ZombieSpawner : MonoBehaviour
                 timeToNextSpawn = Random.Range(minTimeToSpawn, maxTimeToSpawn);
                 
                 //spawn on right edge of camera at random height
-                Vector2 spawnPos = new Vector2(Camera.main.transform.position.x + 1 + Camera.main.orthographicSize * Screen.width / Screen.height, Random.Range(Camera.main.transform.position.y - Camera.main.orthographicSize, Camera.main.transform.position.y + Camera.main.orthographicSize));
+                Vector2 spawnPos = new Vector2(Camera.main.transform.position.x + 1 + Camera.main.orthographicSize * Screen.width / Screen.height, 0);
 
                 //GameObject newZombie = Instantiate(zombiePrefab, spawnPos, Quaternion.identity);
 
                 GameObject newZombie = PoolManager.Instance.SpawnFromPool(zombiePrefab.name, spawnPos, Quaternion.identity);
 
                 //find closest target base and walk there
-                int indexWithShortestDistance = 0;
-                float shortestDistance = Mathf.Infinity;
-                for (int i = 0; i < baseTargets.Length; i++)
+                //int indexWithShortestDistance = 0;
+                //float shortestDistance = Mathf.Infinity;
+                //for (int i = 0; i < baseTargets.Length; i++)
+                //{
+                //    if (Vector2.Distance(newZombie.transform.position, baseTargets[i].transform.position) < shortestDistance)
+                //    {
+                //        indexWithShortestDistance = i;
+                //        shortestDistance = Vector2.Distance(newZombie.transform.position, baseTargets[i].transform.position);
+                //    }
+                //}
+                int randPath = Mathf.FloorToInt(Random.Range(1, 5));
+                if (randPath == 1)
                 {
-                    if (Vector2.Distance(newZombie.transform.position, baseTargets[i].transform.position) < shortestDistance)
-                    {
-                        indexWithShortestDistance = i;
-                        shortestDistance = Vector2.Distance(newZombie.transform.position, baseTargets[i].transform.position);
-                    }
+                    newZombie.GetComponent<Zombie>().pathToFollow = pathOne;
+                } else if (randPath == 2)
+                {
+                    newZombie.GetComponent<Zombie>().pathToFollow = pathTwo;
+                }
+                else if (randPath == 3)
+                {
+                    newZombie.GetComponent<Zombie>().pathToFollow = pathThree;
+                }
+                else if (randPath == 4)
+                {
+                    newZombie.GetComponent<Zombie>().pathToFollow = pathFour;
                 }
 
-                newZombie.GetComponent<Zombie>().targetPoint = baseTargets[indexWithShortestDistance];
+                newZombie.transform.position = newZombie.GetComponent<Zombie>().pathToFollow[0];
                 numZombiesToSpawn--;
             }
         }
