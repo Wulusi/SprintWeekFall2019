@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: 2887254870734219001}
   - component: {fileID: 2887254870734218948}
   - component: {fileID: 3209026215713152155}
+  - component: {fileID: 8041201838985643525}
+  - component: {fileID: 285901712907966845}
   m_Layer: 0
   m_Name: AtkPlayer1
   m_TagString: Untagged
@@ -227,6 +229,7 @@ MonoBehaviour:
   shot: {fileID: 2615823765217977266, guid: 61e128129c47f8c4eb6b8c531b50b3ca, type: 3}
   firedShot: {fileID: 0}
   hasShot: 0
+  autoFire: 0
   weaponParams: {fileID: 11400000, guid: 796fcccf0bef0524e80961c29cab45a6, type: 2}
   localScale: 0
   triggerFloat: 0
@@ -237,6 +240,49 @@ MonoBehaviour:
   shotCoolDown: 0.5
   shotSpeed: 15
   barrel: {fileID: 2887254870571583917}
+--- !u!114 &8041201838985643525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887254870734219000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c6d7b5976eeb441a018a22953db34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementType: {fileID: 11400000, guid: 7162764f0e054a64f8c23bd19e94757c, type: 2}
+  maxHealth: 5
+  currentHealth: 5
+  owner: {fileID: 2887254870734219000}
+  respawnTimer: 5
+--- !u!61 &285901712907966845
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887254870734219000}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
 --- !u!1 &2902184068337857814
 GameObject:
   m_ObjectHideFlags: 0

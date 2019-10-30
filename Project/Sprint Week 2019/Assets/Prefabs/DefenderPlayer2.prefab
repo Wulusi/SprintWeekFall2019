@@ -89,6 +89,9 @@ GameObject:
   - component: {fileID: 6389515060962737028}
   - component: {fileID: 6389515060962737077}
   - component: {fileID: 6389515060962737076}
+  - component: {fileID: 3611729037863896666}
+  - component: {fileID: 7404503016091873182}
+  - component: {fileID: 2679893322899002185}
   m_Layer: 0
   m_Name: DefenderPlayer2
   m_TagString: Untagged
@@ -218,6 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c4a9f1b3b5c6e40a6cf44c9faca74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeSinceLastSpawn: 0
   coolDownTime: 3
   maxSpawns: 15
   obstaclePrefab: {fileID: 1282958123816497461, guid: e9b93559a5d0f0b45bb86e70e93d1164,
@@ -244,6 +248,66 @@ MonoBehaviour:
   triggerAmt: 0
   triggerTimer: 3
   barrierCoolDown: 5
+--- !u!61 &3611729037863896666
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6389515060962737080}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
+--- !u!114 &7404503016091873182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6389515060962737080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c6d7b5976eeb441a018a22953db34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementType: {fileID: 0}
+  maxHealth: 5
+  currentHealth: 5
+  owner: {fileID: 6389515060962737080}
+  respawnTimer: 10
+--- !u!114 &2679893322899002185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6389515060962737080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a554a9201bf234899bd473247fb5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIndex: 0
+  knockbackForce: 3
+  cooldownTimer: 3
+  knockbackRadius: 3
+  debugLines: 0
 --- !u!1 &6389515061336970476
 GameObject:
   m_ObjectHideFlags: 0
