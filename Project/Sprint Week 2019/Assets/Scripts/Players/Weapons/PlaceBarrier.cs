@@ -70,9 +70,9 @@ public class PlaceBarrier : MonoBehaviour
 
     void DetermineSpawnLocation()
     {
-        if (obstacleSpawner.GetClosestEnemy(gridSystem.gridLocations).transform.position != null)
+        if (obstacleSpawner.GetClosestEnemy(gridSystem.gridLocations) != null)
         {
-            buildTimer.transform.position = Vector3.right + obstacleSpawner.GetClosestEnemy(gridSystem.gridLocations).transform.position; 
+            buildTimer.transform.position = obstacleSpawner.GetClosestEnemy(gridSystem.gridLocations).transform.position; 
         }
     }
 

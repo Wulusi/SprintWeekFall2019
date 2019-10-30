@@ -45,15 +45,20 @@ public class ObstacleSpawner : MonoBehaviour
                 newObstacle.transform.rotation = Quaternion.identity;
 
                 //Spawn to the right hand side of the player
+                if (GetClosestEnemy(gridSystem.gridLocations).gameObject != null)
+                {
 
-                GameObject closestDot = GetClosestEnemy(gridSystem.gridLocations).gameObject;
+                    GameObject closestDot = GetClosestEnemy(gridSystem.gridLocations).gameObject;
 
-                newObstacle.transform.position = Vector3.right + new Vector3(closestDot.transform.localPosition.x, closestDot.transform.localPosition.y);
 
-                closestDot.GetComponent<DotTracker>().isOccupied = true;
-                newObstacle.GetComponent<Obstacle>().currentDot = closestDot;
-                gridSystem.gridLocations.Remove(closestDot.transform);
-                newObstacle.GetComponent<Obstacle>().owner = this;
+                    newObstacle.transform.position = new Vector3(closestDot.transform.localPosition.x, closestDot.transform.localPosition.y);
+
+                    //closestDot.GetComponent<DotTracker>().isOccupied = true;
+                    gridSystem.gridLocations.Remove(closestDot.transform);
+                    newObstacle.GetComponent<Obstacle>().currentDot = closestDot;
+                    newObstacle.GetComponent<Obstacle>().owner = this;
+                    closestDot.SetActive(false);
+                }
 
                 //Vector3 DebugVector = new Vector3(GetClosestEnemy(gridSystem.gridLocations).transform.localPosition.x, GetClosestEnemy(gridSystem.gridLocations).transform.localPosition.y);
 
