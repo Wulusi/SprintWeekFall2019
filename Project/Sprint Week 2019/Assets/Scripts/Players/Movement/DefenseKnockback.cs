@@ -50,7 +50,7 @@ public class DefenseKnockback : MonoBehaviour
                 {
                     Debug.DrawLine(rb.position, new Vector3(rb.position.x + Mathf.Cos(i * Mathf.Deg2Rad) * knockbackRadius,
                                                             rb.position.y + Mathf.Sin(i * Mathf.Deg2Rad) * knockbackRadius,
-                                                            0), Color.blue, 2f);
+                                                            0), Color.blue, cooldownTimer);
                 }
             }
             
