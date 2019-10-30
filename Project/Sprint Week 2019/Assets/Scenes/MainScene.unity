@@ -352,6 +352,11 @@ PrefabInstance:
       propertyPath: playerIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6389515060962737076, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: barrierCoolDown
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45ee159694e505a4fa400976f37df60b, type: 3}
 --- !u!4 &797211053 stripped
@@ -870,8 +875,45 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
         type: 3}
+      propertyPath: pools.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
+        type: 3}
       propertyPath: pools.Array.data[0].size
-      value: 25
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
+        type: 3}
+      propertyPath: pools.Array.data[1].tag
+      value: zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
+        type: 3}
+      propertyPath: pools.Array.data[1].prefab
+      value: 
+      objectReference: {fileID: 8430057151150378414, guid: ebcc451355eaae442984d3bbda86c178,
+        type: 3}
+    - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
+        type: 3}
+      propertyPath: pools.Array.data[1].size
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
+        type: 3}
+      propertyPath: pools.Array.data[2].tag
+      value: obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
+        type: 3}
+      propertyPath: pools.Array.data[2].prefab
+      value: 
+      objectReference: {fileID: 1282958123816497461, guid: e9b93559a5d0f0b45bb86e70e93d1164,
+        type: 3}
+    - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
+        type: 3}
+      propertyPath: pools.Array.data[2].size
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfb9184757aa547498a700bc38406e81, type: 3}

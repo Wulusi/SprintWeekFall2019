@@ -30,7 +30,8 @@ public class Health : MonoBehaviour, ObjectInterface
     {
         if (currentHealth <= 0)
         {
-            Destroy(owner);
+            //Destroy(owner);
+            owner.gameObject.SetActive(false);
         }
     }
 

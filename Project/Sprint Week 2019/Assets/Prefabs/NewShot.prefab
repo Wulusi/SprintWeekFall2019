@@ -133,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   startTime: 5
+  shrinkSpeed: 10
 --- !u!58 &312561168660225591
 CircleCollider2D:
   m_ObjectHideFlags: 0

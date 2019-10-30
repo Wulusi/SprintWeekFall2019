@@ -31,7 +31,9 @@ public class ZombieSpawner : MonoBehaviour
                 //spawn on right edge of camera at random height
                 Vector2 spawnPos = new Vector2(Camera.main.transform.position.x + 1 + Camera.main.orthographicSize * Screen.width / Screen.height, Random.Range(Camera.main.transform.position.y - Camera.main.orthographicSize, Camera.main.transform.position.y + Camera.main.orthographicSize));
 
-                GameObject newZombie = Instantiate(zombiePrefab, spawnPos, Quaternion.identity);
+                //GameObject newZombie = Instantiate(zombiePrefab, spawnPos, Quaternion.identity);
+
+                GameObject newZombie = PoolManager.Instance.SpawnFromPool(zombiePrefab.name, spawnPos, Quaternion.identity);
 
                 //find closest target base and walk there
                 int indexWithShortestDistance = 0;

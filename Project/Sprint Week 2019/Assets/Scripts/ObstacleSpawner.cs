@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    float timeSinceLastSpawn;
+    public float timeSinceLastSpawn;
     public float coolDownTime;
     public int maxSpawns;
     public GameObject obstaclePrefab;
@@ -27,9 +27,11 @@ public class ObstacleSpawner : MonoBehaviour
         {
             if (activeObstacles.Count < maxSpawns)
             {
-                GameObject newObstacle = Instantiate(obstaclePrefab, transform.position + transform.up, transform.rotation);
+                //GameObject newObstacle = Instantiate(obstaclePrefab, transform.position + transform.up, transform.rotation);
+                GameObject newObstacle = PoolManager.Instance.SpawnFromPool(obstaclePrefab.name, transform.position + transform.up, transform.rotation);
                 newObstacle.GetComponent<Obstacle>().owner = this;
                 activeObstacles.Add(newObstacle);
+                timeSinceLastSpawn = 0;
             }
         }
     }

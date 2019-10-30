@@ -8,7 +8,7 @@ public class ChargedShotTest : MonoBehaviour
     public GamePad.Index playerIndex;
     public Vector2 triggerIndex;
     public GameObject shot, firedShot;
-    public bool hasShot;
+    public bool hasShot, autoFire;
 
     public sObj_WeaponParams weaponParams;
 
@@ -70,6 +70,16 @@ public class ChargedShotTest : MonoBehaviour
                     firedShot.transform.localScale = new Vector3(localScale, localScale, localScale);
                     ShootChargedShot(localScale, firedShot);
                 }
+
+
+                if (firedShot != null && autoFire)
+                {
+                    firedShot.transform.position = transform.position + transform.up;
+                    localScale += (Time.deltaTime * triggerFloat * chargeSpeed);
+                    localScale = Mathf.Clamp(localScale, minShotSize, maxShotSize);
+                    firedShot.transform.localScale = new Vector3(localScale, localScale, localScale);
+                    ShootShot(localScale, firedShot);
+                }
             }
         }
         else
@@ -81,7 +91,14 @@ public class ChargedShotTest : MonoBehaviour
                 localScale = Mathf.Clamp(localScale, minShotSize, maxShotSize);
                 firedShot.transform.localScale = new Vector3(localScale, localScale, localScale);
                 ShootShot(localScale, firedShot);
+            
             }
+        }
+
+        if (triggerFloat <= 0)
+        {
+            autoFire = false;
+            StopCoroutine(CommenceAutoFire(0f));
         }
     }
 
@@ -89,23 +106,29 @@ public class ChargedShotTest : MonoBehaviour
     {
         if (shotSize >= maxShotSize)
         {
-            hasShot = true;
             shot.transform.localScale = new Vector3(localScale, localScale, localScale);
-            shot.GetComponent<Rigidbody2D>().velocity = transform.up * shotSpeed;
-            firedShot = null;
+            StartCoroutine(CommenceAutoFire(5f));
+
+            //If the trigger was released
+            if (triggerFloat <= 0)
+            {
+                hasShot = true;
+                shot.GetComponent<Rigidbody2D>().velocity = transform.up * shotSpeed;
+                firedShot = null;
+                autoFire = false;
+                StartCoroutine(CountDown(shotCoolDown));
+            }
 
             if (firedShot == null)
             {
                 //Do nothing here
             }
-
-            StartCoroutine(CountDown());
         }
     }
 
     void ShootShot(float shotSize, GameObject shot)
     {
-        if (shotSize >= minShotThreshold)
+        if (shotSize >= minShotThreshold && !autoFire)
         {
             hasShot = true;
             shot.transform.localScale = new Vector3(localScale, localScale, localScale);
@@ -117,13 +140,21 @@ public class ChargedShotTest : MonoBehaviour
                 //Do nothing here
             }
 
-            StartCoroutine(CountDown());
+            StartCoroutine(CountDown(shotCoolDown));
+        }
+        else if (shotSize >= minShotThreshold * 0.5f && autoFire)
+        {
+            hasShot = true;
+            shot.transform.localScale = new Vector3(localScale, localScale, localScale);
+            shot.GetComponent<Rigidbody2D>().velocity = transform.up * shotSpeed;
+            firedShot = null;
+            StartCoroutine(CountDown(shotCoolDown * 0.1f));
         }
     }
 
-    private IEnumerator CountDown()
+    private IEnumerator CountDown(float coolDown)
     {
-        float duration = shotCoolDown;
+        float duration = coolDown;
         float time = 0;
 
         while (time <= duration)
@@ -133,5 +164,18 @@ public class ChargedShotTest : MonoBehaviour
         }
         localScale = 0;
         hasShot = false;
+    }
+
+    private IEnumerator CommenceAutoFire(float countDown)
+    {
+        float duration = countDown;
+        float time = 0;
+
+        while (time <= duration)
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+        autoFire = true;
     }
 }

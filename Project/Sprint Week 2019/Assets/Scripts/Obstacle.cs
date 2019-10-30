@@ -6,8 +6,21 @@ public class Obstacle : MonoBehaviour
 {
     public ObstacleSpawner owner;
 
-    private void OnDestroy()
+    private void OnEnable()
     {
-        owner.activeObstacles.Remove(this.gameObject);
+        owner = GetComponentInParent<ObstacleSpawner>();
     }
+
+    private void OnDisable()
+    {
+        if (owner != null)
+        {
+            owner.activeObstacles.Remove(this.gameObject);
+        }
+    }
+
+    //private void OnDestroy()
+    //{
+    //    owner.activeObstacles.Remove(this.gameObject);
+    //}
 }

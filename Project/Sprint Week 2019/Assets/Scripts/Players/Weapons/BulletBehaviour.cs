@@ -4,26 +4,38 @@ using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour, ObjectInterface
 {
-    public float timer, startTime;
+    public float timer, startTime, shrinkSpeed;
+
+    public bool startShrink;
     public void OnObjectSpawn()
     {
         Debug.Log("Bullet Recycled");
         this.transform.localScale = Vector3.zero;
         timer = startTime;
         StartCoroutine(CountDown());
+        startShrink = false;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         timer = startTime;
-      
+
+    }
+
+    void CheckShotSize()
+    {
+        if (transform.localScale.x <= 0.2f)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        ShrinkShot();
+        CheckShotSize();
     }
 
     private IEnumerator CountDown()
@@ -36,6 +48,14 @@ public class BulletBehaviour : MonoBehaviour, ObjectInterface
             time += Time.deltaTime;
             yield return null;
         }
-        this.gameObject.SetActive(false);
+        startShrink = true;
+    }
+
+    private void ShrinkShot()
+    {
+        if (startShrink)
+        {
+            this.transform.localScale -= Vector3.one * Time.deltaTime * shrinkSpeed;
+        }
     }
 }
