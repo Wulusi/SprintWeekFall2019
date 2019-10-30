@@ -227,8 +227,10 @@ MonoBehaviour:
   maxSpawns: 15
   obstaclePrefab: {fileID: 1282958123816497461, guid: e9b93559a5d0f0b45bb86e70e93d1164,
     type: 3}
+  currentPlaceMent: {fileID: 0}
   activeObstacles: []
   gridSystem: {fileID: 0}
+  BuildMeter: {fileID: 0}
 --- !u!114 &6389515060962737076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +252,7 @@ MonoBehaviour:
   triggerFloat: 0
   triggerAmt: 0
   triggerTimer: 3
-  barrierCoolDown: 5
+  barrierCoolDown: 3
 --- !u!61 &3611729037863896666
 BoxCollider2D:
   m_ObjectHideFlags: 0
