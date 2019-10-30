@@ -29,7 +29,7 @@ public class PlayerMotor : MonoBehaviour
         }
         if (moveDir != Vector2.zero && currentSpeed < maxSpeed && !isStarting)
         {
-            CalcAccel(maxSpeed, decelTime);
+            CalcAccel(maxSpeed, accelTime);
             isStopping = false;
             isStarting = true;
         }
