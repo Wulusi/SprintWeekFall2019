@@ -355,7 +355,17 @@ PrefabInstance:
     - target: {fileID: 6389515060962737076, guid: 45ee159694e505a4fa400976f37df60b,
         type: 3}
       propertyPath: barrierCoolDown
-      value: 3
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389515060962737076, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: triggerTimer
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389515060962737077, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: coolDownTime
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45ee159694e505a4fa400976f37df60b, type: 3}
