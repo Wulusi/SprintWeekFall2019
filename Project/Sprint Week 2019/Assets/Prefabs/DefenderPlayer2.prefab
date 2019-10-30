@@ -205,8 +205,8 @@ MonoBehaviour:
   lastAimDir: {x: 0, y: 0}
   maxSpeed: 3
   currentSpeed: 0
-  accelTime: 2
-  decelTime: 1
+  accelTime: 1
+  decelTime: 0.1
   isStarting: 0
   isStopping: 0
 --- !u!114 &6389515060962737077
@@ -293,7 +293,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   owner: {fileID: 6389515060962737080}
-  respawnTimer: 10
+  respawnTimer: 5
 --- !u!114 &2679893322899002185
 MonoBehaviour:
   m_ObjectHideFlags: 0

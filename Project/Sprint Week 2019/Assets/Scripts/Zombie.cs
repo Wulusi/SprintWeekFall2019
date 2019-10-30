@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Zombie : MonoBehaviour
 {
@@ -26,6 +27,11 @@ public class Zombie : MonoBehaviour
             }
         }
 
+        GameObject[] allBasesLeft = GameObject.FindGameObjectsWithTag("Base");
+        if (allBasesLeft.Length == 0)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
         //GameObject[] allBasesLeft = GameObject.FindGameObjectsWithTag("Base");
         //if (allBasesLeft.Length == 0)
         //{
