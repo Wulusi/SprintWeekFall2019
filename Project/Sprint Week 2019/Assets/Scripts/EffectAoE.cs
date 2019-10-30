@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EffectAoE : MonoBehaviour
 {
-    Element thisElement;
-    Element neutralElement;
+    public Element thisElement;
+    public Element neutralElement;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

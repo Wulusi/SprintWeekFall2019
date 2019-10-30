@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b2e3a56ac32fc40b63336e0f67b765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPoint: {fileID: 0}
+  targetPoint: 0
+  pathToFollow: []
   walkSpd: 0.5
   rb: {fileID: 8430057151150378409}
   damageVal: 1
@@ -141,6 +142,7 @@ MonoBehaviour:
   maxHealth: 6
   currentHealth: 6
   owner: {fileID: 8430057151150378414}
+  respawnTimer: 10
 --- !u!58 &8430057151150378069
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -170,9 +172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementType: {fileID: 0}
-  maxHealth: 5
-  currentHealth: 5
+  maxHealth: 30
+  currentHealth: 30
   owner: {fileID: 0}
+  respawnTimer: 10
 --- !u!58 &6075887753205651044
 CircleCollider2D:
   m_ObjectHideFlags: 0

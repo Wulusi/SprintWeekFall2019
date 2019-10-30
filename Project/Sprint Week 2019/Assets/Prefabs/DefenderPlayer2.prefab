@@ -223,10 +223,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeSinceLastSpawn: 0
   coolDownTime: 3
+  minSpawnDistance: 0
   maxSpawns: 15
   obstaclePrefab: {fileID: 1282958123816497461, guid: e9b93559a5d0f0b45bb86e70e93d1164,
     type: 3}
   activeObstacles: []
+  gridSystem: {fileID: 0}
 --- !u!114 &6389515060962737076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +246,7 @@ MonoBehaviour:
   hasShot: 0
   obstacleSpawner: {fileID: 0}
   buildTimer: {fileID: 745915481}
+  gridSystem: {fileID: 0}
   triggerFloat: 0
   triggerAmt: 0
   triggerTimer: 3
