@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 6389515060962737028}
   - component: {fileID: 6389515060962737077}
   - component: {fileID: 6389515060962737076}
+  - component: {fileID: 64338173196530436}
   m_Layer: 8
   m_Name: DefenderPlayer2
   m_TagString: Untagged
@@ -343,6 +344,23 @@ MonoBehaviour:
   triggerAmt: 0
   triggerTimer: 3
   barrierCoolDown: 5
+--- !u!114 &64338173196530436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6389515060962737080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a554a9201bf234899bd473247fb5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIndex: 0
+  knockbackForce: 10
+  cooldownTimer: 5
+  knockbackRadius: 3
+  debugLines: 0
 --- !u!1 &6389515061336970476
 GameObject:
   m_ObjectHideFlags: 0
