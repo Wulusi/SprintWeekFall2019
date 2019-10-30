@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 745915480}
   - component: {fileID: 745915482}
   - component: {fileID: 745915481}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: BuildTimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 3611729037863896666}
   - component: {fileID: 7404503016091873182}
   - component: {fileID: 2679893322899002185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DefenderPlayer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,10 +223,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeSinceLastSpawn: 0
   coolDownTime: 3
+  minSpawnDistance: 0
   maxSpawns: 15
   obstaclePrefab: {fileID: 1282958123816497461, guid: e9b93559a5d0f0b45bb86e70e93d1164,
     type: 3}
   activeObstacles: []
+  gridSystem: {fileID: 0}
 --- !u!114 &6389515060962737076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +246,7 @@ MonoBehaviour:
   hasShot: 0
   obstacleSpawner: {fileID: 0}
   buildTimer: {fileID: 745915481}
+  gridSystem: {fileID: 0}
   triggerFloat: 0
   triggerAmt: 0
   triggerTimer: 3
@@ -286,7 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67c6d7b5976eeb441a018a22953db34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementType: {fileID: 0}
+  elementType: {fileID: 11400000, guid: 7162764f0e054a64f8c23bd19e94757c, type: 2}
   maxHealth: 5
   currentHealth: 5
   owner: {fileID: 6389515060962737080}
@@ -318,7 +321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6389515061336970477}
   - component: {fileID: 6389515061336970478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +404,7 @@ GameObject:
   - component: {fileID: 6411762548366075985}
   - component: {fileID: 6411762548366075984}
   - component: {fileID: 6875327248157082017}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +516,7 @@ GameObject:
   - component: {fileID: 6411762549285172598}
   - component: {fileID: 6411762549285172597}
   - component: {fileID: 832923551395291953}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
