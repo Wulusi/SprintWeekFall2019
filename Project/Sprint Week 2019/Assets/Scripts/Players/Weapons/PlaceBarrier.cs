@@ -44,6 +44,7 @@ public class PlaceBarrier : MonoBehaviour
     {
         if (triggerFloat != 0)
         {
+            DetermineSpawnLocation();
             triggerAmt += (Time.deltaTime * triggerFloat) / triggerTimer;
             triggerAmt = Mathf.Clamp(triggerAmt, 0, 1);
 
@@ -65,6 +66,14 @@ public class PlaceBarrier : MonoBehaviour
     void UpdateUI()
     {
         buildTimer.fillAmount = triggerAmt;
+    }
+
+    void DetermineSpawnLocation()
+    {
+        if (obstacleSpawner.GetClosestEnemy(gridSystem.gridLocations).transform.position != null)
+        {
+            buildTimer.transform.position = Vector3.right + obstacleSpawner.GetClosestEnemy(gridSystem.gridLocations).transform.position; 
+        }
     }
 
     private IEnumerator CountDown()
