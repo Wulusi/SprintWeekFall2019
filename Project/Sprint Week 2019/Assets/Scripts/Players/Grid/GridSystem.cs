@@ -37,6 +37,7 @@ public class GridSystem : MonoBehaviour
             {
                 GameObject spawnedDot = Instantiate(gridDot);
                 spawnedDot.transform.position = new Vector3(i + 0.5f , j + 0.5f);
+                spawnedDot.transform.parent = this.gameObject.transform;
                 gridLocations.Add(spawnedDot.transform);
             }
         }
