@@ -26,6 +26,7 @@ public class Obstacle : MonoBehaviour
         if (currentDot != null)
         {
             gridSystem.gridLocations.Add(currentDot.transform);
+            currentDot.SetActive(true);
         }
     }
 

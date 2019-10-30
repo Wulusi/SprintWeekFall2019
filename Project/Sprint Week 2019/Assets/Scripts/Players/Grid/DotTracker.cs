@@ -17,7 +17,7 @@ public class DotTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnEnable()
@@ -34,7 +34,10 @@ public class DotTracker : MonoBehaviour
 
     private void OnDisable()
     {
-        Debug.Log(this.gameObject.name + "Removed from GridSystem");
-        gridSystem.gridLocations.Remove(this.gameObject.transform);
+        if (gridSystem.gridLocations != null)
+        {
+            Debug.Log(this.gameObject.name + "Removed from GridSystem");
+            gridSystem.gridLocations.Remove(this.gameObject.transform);
+        }
     }
 }

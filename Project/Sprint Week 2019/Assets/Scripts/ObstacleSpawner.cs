@@ -36,35 +36,34 @@ public class ObstacleSpawner : MonoBehaviour
         {
             if (activeObstacles.Count < maxSpawns)
             {
-                //GameObject newObstacle = Instantiate(obstaclePrefab, transform.position + transform.up, transform.rotation);
-                GameObject newObstacle = PoolManager.Instance.SpawnFromPool(obstaclePrefab.name, transform.position + transform.up, transform.rotation);
-
-                //Find the nearest point for the newly spawned obstacle/resource generator
-                //newObstacle.transform.position = new Vector3(Mathf.Round(transform.position.x) + 0.5f, Mathf.Round(transform.position.y) + 0.5f);
-                //currentPlaceMent = newObstacle;
-                newObstacle.transform.rotation = Quaternion.identity;
-
-                //Spawn to the right hand side of the player
-                if (GetClosestEnemy(gridSystem.gridLocations).gameObject != null)
+                //Spawn to the right hand side of the player if there are available spawn locations
+                if (gridSystem.gridLocations.Count > 0)
                 {
+                    //GameObject newObstacle = Instantiate(obstaclePrefab, transform.position + transform.up, transform.rotation);
+                    GameObject newObstacle = PoolManager.Instance.SpawnFromPool(obstaclePrefab.name, transform.position + transform.up, transform.rotation);
+
+                    //Find the nearest point for the newly spawned obstacle/resource generator
+                    //newObstacle.transform.position = new Vector3(Mathf.Round(transform.position.x) + 0.5f, Mathf.Round(transform.position.y) + 0.5f);
+                    //currentPlaceMent = newObstacle;
+                    newObstacle.transform.rotation = Quaternion.identity;
 
                     GameObject closestDot = GetClosestEnemy(gridSystem.gridLocations).gameObject;
 
 
-                    newObstacle.transform.position = new Vector3(closestDot.transform.localPosition.x, closestDot.transform.localPosition.y);
+                    newObstacle.transform.position = Vector3.right + new Vector3(closestDot.transform.localPosition.x, closestDot.transform.localPosition.y);
 
                     //closestDot.GetComponent<DotTracker>().isOccupied = true;
                     gridSystem.gridLocations.Remove(closestDot.transform);
                     newObstacle.GetComponent<Obstacle>().currentDot = closestDot;
                     newObstacle.GetComponent<Obstacle>().owner = this;
                     closestDot.SetActive(false);
+
+                    //Vector3 DebugVector = new Vector3(GetClosestEnemy(gridSystem.gridLocations).transform.localPosition.x, GetClosestEnemy(gridSystem.gridLocations).transform.localPosition.y);
+
+                    //Debug.Log("Nearest Vector is " + DebugVector);
+                    activeObstacles.Add(newObstacle);
+                    timeSinceLastSpawn = 0;
                 }
-
-                //Vector3 DebugVector = new Vector3(GetClosestEnemy(gridSystem.gridLocations).transform.localPosition.x, GetClosestEnemy(gridSystem.gridLocations).transform.localPosition.y);
-
-                //Debug.Log("Nearest Vector is " + DebugVector);
-                activeObstacles.Add(newObstacle);
-                timeSinceLastSpawn = 0;
             }
         }
     }

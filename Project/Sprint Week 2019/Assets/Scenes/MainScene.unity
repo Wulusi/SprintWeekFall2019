@@ -1903,12 +1903,12 @@ PrefabInstance:
     - target: {fileID: 4401023278991024844, guid: c528419b18354554b95c4f4155400c44,
         type: 3}
       propertyPath: gridWidth
-      value: 3
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4401023278991024844, guid: c528419b18354554b95c4f4155400c44,
         type: 3}
       propertyPath: gridHeight
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c528419b18354554b95c4f4155400c44, type: 3}
