@@ -24,7 +24,7 @@ public class GetPlayerRole : MonoBehaviour
 
     IEnumerator waitToGetData()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
         DetermineRole();
     }
 

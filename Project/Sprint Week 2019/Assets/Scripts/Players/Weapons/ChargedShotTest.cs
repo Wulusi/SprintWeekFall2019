@@ -50,7 +50,7 @@ public class ChargedShotTest : MonoBehaviour
     {
         triggerFloatRight = GamePad.GetTrigger(GamePad.Trigger.RightTrigger, playerIndex);
         triggerFloatLeft = GamePad.GetTrigger(GamePad.Trigger.LeftTrigger, playerIndex);
-        Debug.Log("LeftTriggerFloat is " + triggerFloatLeft);
+        //Debug.Log("LeftTriggerFloat is " + triggerFloatLeft);
     }
 
     void InflateObject()

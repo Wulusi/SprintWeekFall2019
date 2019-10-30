@@ -36,6 +36,7 @@ public class ObstacleSpawner : MonoBehaviour
                 GameObject newObstacle = PoolManager.Instance.SpawnFromPool(obstaclePrefab.name, transform.position + transform.up, transform.rotation);
                 //Find the nearest point for the newly spawned obstacle/resource generator
                 newObstacle.transform.position = new Vector3(Mathf.Round(transform.position.x) + 0.5f, Mathf.Round(transform.position.y) + 0.5f);
+                newObstacle.transform.rotation = Quaternion.identity;
 
                 //OneTwoThreeFour
                 //newObstacle.transform.position = new Vector3(DetermineNearestDot().transform.position.x, DetermineNearestDot().transform.position.y);
