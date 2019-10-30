@@ -13,7 +13,9 @@ public class ChargedShotTest : MonoBehaviour
     public sObj_WeaponParams weaponParams;
 
     [HideInInspector]
-    public float localScale, triggerFloatRight, triggerFloatLeft, maxShotSize, minShotSize, minShotThreshold, chargeSpeed, shotCoolDown, shotSpeed;
+    public float localScale, maxShotSize, minShotSize, minShotThreshold, chargeSpeed, shotCoolDown, shotSpeed;
+
+    public float triggerFloatRight, triggerFloatLeft;
 
     public Transform barrel;
 
