@@ -67,7 +67,7 @@ public class ZombieSpawner : MonoBehaviour
                     newZombie.GetComponent<Zombie>().pathToFollow = pathFour;
                 }
 
-                newZombie.transform.position = newZombie.GetComponent<Zombie>().pathToFollow[0];
+                newZombie.transform.position = new Vector2(newZombie.transform.position.x, newZombie.GetComponent<Zombie>().pathToFollow[0].y);
                 numZombiesToSpawn--;
             }
         }
