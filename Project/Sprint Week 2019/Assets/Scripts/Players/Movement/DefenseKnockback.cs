@@ -58,7 +58,7 @@ public class DefenseKnockback : MonoBehaviour
                                                             0), Color.blue, cooldownTimer);
                 }
             }
-            
+
 
             //Check for collision on zombie layer
             Collider2D[] zombieColliders = Physics2D.OverlapCircleAll(rb.position, knockbackRadius,
@@ -67,7 +67,7 @@ public class DefenseKnockback : MonoBehaviour
             //Knockback zombies
             foreach (Collider2D zombieCollider in zombieColliders)
             {
-                Rigidbody2D zombieRb = zombieCollider.GetComponent<Rigidbody2D>();
+                Rigidbody2D zombieRb = zombieCollider.GetComponentInParent<Rigidbody2D>();
                 zombieRb.AddForce((zombieRb.position - rb.position).normalized * knockbackForce, ForceMode2D.Impulse);
             }
         }

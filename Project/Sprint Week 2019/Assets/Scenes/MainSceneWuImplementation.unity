@@ -1730,12 +1730,12 @@ PrefabInstance:
     - target: {fileID: 6389515060962737028, guid: 45ee159694e505a4fa400976f37df60b,
         type: 3}
       propertyPath: playerIndex
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6389515060962737076, guid: 45ee159694e505a4fa400976f37df60b,
         type: 3}
       propertyPath: playerIndex
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6389515061336970476, guid: 45ee159694e505a4fa400976f37df60b,
         type: 3}
