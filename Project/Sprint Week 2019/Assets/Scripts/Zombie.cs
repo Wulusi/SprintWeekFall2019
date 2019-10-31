@@ -8,10 +8,19 @@ public class Zombie : MonoBehaviour
     Vector2 dirToWalk;
     public int targetPoint = 0;
 
+    public Vector2 endPoint;
+
     public Vector2[] pathToFollow;
     public float walkSpd;
     public Rigidbody2D rb;
     public float damageVal, forcePushAmt;
+
+    public bool isAtEnd;
+
+    private void Start()
+    {
+        isAtEnd = false;
+    }
 
     private void Update()
     {
@@ -19,19 +28,49 @@ public class Zombie : MonoBehaviour
         dirToWalk = pathToFollow[targetPoint] - (Vector2)transform.position;
         rb.velocity = Vector2.Lerp(rb.velocity, dirToWalk.normalized * walkSpd, 0.1f);
 
-        if (Vector2.Distance(pathToFollow[targetPoint], transform.position) < 0.1f)
+        List<GameObject> allBasesLeft = new List<GameObject>();
+
+        //GameObject.FindGameObjectsWithTag("Base");
+        //if (allBasesLeft.Length == 0)
+        //{
+        //    SceneManager.LoadScene("MainMenu");
+
+
+        //}
+
+        if (Vector2.Distance(pathToFollow[targetPoint], transform.position) < 0.1f && !isAtEnd)
         {
             if (targetPoint < pathToFollow.Length - 1)
             {
                 targetPoint++;
+
+                if(targetPoint >= pathToFollow.Length - 1)
+                {
+                    isAtEnd = true;
+                }
             }
         }
 
-        GameObject[] allBasesLeft = GameObject.FindGameObjectsWithTag("Base");
-        if (allBasesLeft.Length == 0)
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
+        //if(isAtEnd)
+        //{
+        //    dirToWalk = endPoint - (Vector2)transform.position;
+        //    rb.velocity = Vector2.Lerp(rb.velocity, dirToWalk.normalized * walkSpd, 0.1f);
+
+
+        //    int indexWithShortestDistance = 0;
+        //    float shortestDistance = Mathf.Infinity;
+        //    for (int i = 0; i < allBasesLeft.Length; i++)
+        //    {
+        //        if (Vector2.Distance(transform.position, allBasesLeft[i].transform.position) < shortestDistance)
+        //        {
+        //            indexWithShortestDistance = i;
+        //            shortestDistance = Vector2.Distance(transform.position, allBasesLeft[i].transform.position);
+        //        }
+        //    }
+        //    endPoint = allBasesLeft[indexWithShortestDistance].transform.position;
+        //}
+
+        
         //GameObject[] allBasesLeft = GameObject.FindGameObjectsWithTag("Base");
         //if (allBasesLeft.Length == 0)
         //{
@@ -50,6 +89,11 @@ public class Zombie : MonoBehaviour
         //    }
         //    targetPoint = allBasesLeft[indexWithShortestDistance].transform.position;
         //}
+
+    }
+
+    private void UpdateBaseSize()
+    {
 
     }
 

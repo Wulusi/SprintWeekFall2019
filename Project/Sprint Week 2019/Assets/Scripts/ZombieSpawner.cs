@@ -39,17 +39,6 @@ public class ZombieSpawner : MonoBehaviour
 
                 GameObject newZombie = PoolManager.Instance.SpawnFromPool(zombiePrefabs[(Random.Range(0,zombiePrefabs.Length))].name, spawnPos, Quaternion.identity);
 
-                //find closest target base and walk there
-                //int indexWithShortestDistance = 0;
-                //float shortestDistance = Mathf.Infinity;
-                //for (int i = 0; i < baseTargets.Length; i++)
-                //{
-                //    if (Vector2.Distance(newZombie.transform.position, baseTargets[i].transform.position) < shortestDistance)
-                //    {
-                //        indexWithShortestDistance = i;
-                //        shortestDistance = Vector2.Distance(newZombie.transform.position, baseTargets[i].transform.position);
-                //    }
-                //}
                 int randPath = Mathf.FloorToInt(Random.Range(1, 5));
                 if (randPath == 1)
                 {
@@ -69,6 +58,18 @@ public class ZombieSpawner : MonoBehaviour
 
                 newZombie.transform.position = new Vector2(newZombie.transform.position.x, newZombie.GetComponent<Zombie>().pathToFollow[0].y);
                 numZombiesToSpawn--;
+
+                //find closest target base and walk there
+                //int indexWithShortestDistance = 0;
+                //float shortestDistance = Mathf.Infinity;
+                //for (int i = 0; i < baseTargets.Length; i++)
+                //{
+                //    if (Vector2.Distance(newZombie.transform.position, baseTargets[i].transform.position) < shortestDistance)
+                //    {
+                //        indexWithShortestDistance = i;
+                //        shortestDistance = Vector2.Distance(newZombie.transform.position, baseTargets[i].transform.position);
+                //    }
+                //}
             }
         }
     }

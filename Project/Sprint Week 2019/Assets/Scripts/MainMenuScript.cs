@@ -19,14 +19,14 @@ public class MainMenuScript : MonoBehaviour
     private void Start()
     {
         slider = GetComponent<Slider>();
-        Text[] textObjects = transform.GetComponentsInChildren<Text>();
-        foreach (Text text in textObjects)
-        {
-            if (text.name == "Play") playText = text;
-            if (text.name == "Quit") quitText = text;
-        }
-        highlightColour = playText.color;
-        darkColour = quitText.color;
+        //Text[] textObjects = transform.GetComponentsInChildren<Text>();
+        //foreach (Text text in textObjects)
+        //{
+        //    if (text.name == "Play") playText = text;
+        //    if (text.name == "Quit") quitText = text;
+        //}
+        //highlightColour = playText.color;
+        //darkColour = quitText.color;
         StartCoroutine(MenuAction());
     }
     private void Update()
@@ -57,8 +57,8 @@ public class MainMenuScript : MonoBehaviour
                 else
                 {
                     slider.value++;
-                    playText.color = darkColour;
-                    quitText.color = highlightColour;
+                    //playText.color = darkColour;
+                    //quitText.color = highlightColour;
                 }
                 while (dpadPress.y > 0) yield return null;             
             }
@@ -69,8 +69,8 @@ public class MainMenuScript : MonoBehaviour
                 else
                 {
                     slider.value--;
-                    playText.color = highlightColour;
-                    quitText.color = darkColour;
+                    //playText.color = highlightColour;
+                    //quitText.color = darkColour;
                 }
                 while (dpadPress.y < 0) yield return null;
             }
