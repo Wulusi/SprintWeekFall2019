@@ -30,6 +30,14 @@ public class Zombie : MonoBehaviour
     private void Update()
     {
 
+        GameObject[] allBasesLeft = GameObject.FindGameObjectsWithTag("Base");
+
+        //GameObject.FindGameObjectsWithTag("Base");
+        if (allBasesLeft.Length == 0)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
         if (isAtEnd)
         {
             Vector2 nextNearestBase = Vector2.positiveInfinity;
@@ -47,17 +55,8 @@ public class Zombie : MonoBehaviour
         }
 
         else dirToWalk = pathToFollow[targetPoint] - (Vector2)transform.position;
-        rb.velocity = Vector2.Lerp(rb.velocity, dirToWalk.normalized * walkSpd, 0.1f);
+        if (dirToWalk != Vector2.positiveInfinity) rb.velocity = Vector2.Lerp(rb.velocity, dirToWalk.normalized * walkSpd, 0.1f);
 
-        GameObject[] allBasesLeft = GameObject.FindGameObjectsWithTag("Base");
-
-        //GameObject.FindGameObjectsWithTag("Base");
-        if (allBasesLeft.Length == 0)
-        {
-            SceneManager.LoadScene("MainMenu");
-
-
-        }
 
         if (Vector2.Distance(pathToFollow[targetPoint], transform.position) < 0.1f && !isAtEnd)
         {
