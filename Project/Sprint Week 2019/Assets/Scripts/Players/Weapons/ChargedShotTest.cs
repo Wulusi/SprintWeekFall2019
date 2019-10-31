@@ -64,8 +64,9 @@ public class ChargedShotTest : MonoBehaviour
         {
             if (!hasShot)
             {
-                firedShot = PoolManager.Instance.SpawnFromPool(shot.name, transform.position + transform.up, Quaternion.identity);
+                firedShot = PoolManager.Instance.SpawnFromPool(shot.name, barrel.transform.position + transform.up, Quaternion.identity);
                 firedShot.GetComponent<BulletDmg>().elementType = currentElement;
+                firedShot.GetComponent<SpriteRenderer>().color = elementColour;
                 hasShot = true;
                 firedShot.transform.position = transform.position + transform.up;
             }
@@ -101,6 +102,7 @@ public class ChargedShotTest : MonoBehaviour
             {
                 firedShot = PoolManager.Instance.SpawnFromPool(shot.name, transform.position + transform.up, Quaternion.identity);
                 firedShot.GetComponent<BulletDmg>().elementType = currentElement;
+                firedShot.GetComponent<SpriteRenderer>().color = elementColour;
                 hasShot = true;
                 firedShot.transform.position = transform.position + transform.up;
             }

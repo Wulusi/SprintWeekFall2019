@@ -20,14 +20,17 @@ public class Health : MonoBehaviour, ObjectInterface
     {
         if (elementType.vulnerableTo == type)
         {
+            Debug.Log("Weakness Dmg!");
             currentHealth -= dmg * 2;
         }
         else if (elementType.strongAgainst == type)
         {
+            Debug.Log("Resist Dmg!");
             currentHealth -= dmg / 2;
         }
         else
         {
+            Debug.Log("Normal Dmg!");
             currentHealth -= dmg;
         }
         CheckDeath();
