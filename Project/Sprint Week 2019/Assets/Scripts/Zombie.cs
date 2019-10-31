@@ -35,7 +35,7 @@ public class Zombie : MonoBehaviour
         //GameObject.FindGameObjectsWithTag("Base");
         if (allBasesLeft.Length == 0)
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("GameOver");
         }
 
         if (isAtEnd)
