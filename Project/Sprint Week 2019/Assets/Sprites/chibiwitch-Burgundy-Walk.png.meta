@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: f49834ab292dfc54da9f3d815a9390d3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -560561996260607499
+    second: chibiwitch-Burgundy-Walk_0
+  - first:
+      213: -8261260338943693108
+    second: chibiwitch-Burgundy-Walk_1
+  - first:
+      213: -6942974970097007062
+    second: chibiwitch-Burgundy-Walk_2
+  - first:
+      213: 2486463246685147720
+    second: chibiwitch-Burgundy-Walk_3
+  - first:
+      213: -6424361283748800601
+    second: chibiwitch-Burgundy-Walk_4
+  - first:
+      213: 7457805893282847110
+    second: chibiwitch-Burgundy-Walk_5
+  - first:
+      213: 6971020539347605896
+    second: chibiwitch-Burgundy-Walk_6
+  - first:
+      213: 1358356022365583737
+    second: chibiwitch-Burgundy-Walk_7
+  - first:
+      213: 4351849730200562895
+    second: chibiwitch-Burgundy-Walk_8
+  - first:
+      213: -4701420600291217564
+    second: chibiwitch-Burgundy-Walk_9
+  - first:
+      213: -5006208004098355480
+    second: chibiwitch-Burgundy-Walk_10
+  - first:
+      213: 4908672682832541221
+    second: chibiwitch-Burgundy-Walk_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +76,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +106,309 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: chibiwitch-Burgundy-Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 966
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8262fcbc4738846bb6f89f03d0c9bf
+      internalID: -560561996260607499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Burgundy-Walk_1
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 0
+        width: 968
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e8f6400bacea94899d4fb07d32027e
+      internalID: -8261260338943693108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Burgundy-Walk_2
+      rect:
+        serializedVersion: 2
+        x: 1940
+        y: 0
+        width: 974
+        height: 1742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814e313d2f0d38b459e6216bd1f019bc
+      internalID: -6942974970097007062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Burgundy-Walk_3
+      rect:
+        serializedVersion: 2
+        x: 2894
+        y: 0
+        width: 974
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c4bc897b7ed1f4ab0d41c13aec8c6c
+      internalID: 2486463246685147720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Burgundy-Walk_4
+      rect:
+        serializedVersion: 2
+        x: 3868
+        y: 0
+        width: 961
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef558a7c36daf542b4fa7434a479e8d
+      internalID: -6424361283748800601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Burgundy-Walk_5
+      rect:
+        serializedVersion: 2
+        x: 4822
+        y: 0
+        width: 954
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6684a86c644d83a47950195bc0df9c7c
+      internalID: 7457805893282847110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Burgundy-Walk_6
+      rect:
+        serializedVersion: 2
+        x: 5783
+        y: 0
+        width: 981
+        height: 1742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11ecdbb8820433458436c17a11f8274
+      internalID: 6971020539347605896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Burgundy-Walk_7
+      rect:
+        serializedVersion: 2
+        x: 6764
+        y: 0
+        width: 961
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5959801cd67ac954a9c2002db4ee3506
+      internalID: 1358356022365583737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Burgundy-Walk_8
+      rect:
+        serializedVersion: 2
+        x: 7725
+        y: 0
+        width: 987
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287140c677a268040ab71f29fa4f139b
+      internalID: 4351849730200562895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Burgundy-Walk_9
+      rect:
+        serializedVersion: 2
+        x: 8699
+        y: 0
+        width: 967
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f722f7cc2820b0c45ba1829be2a84555
+      internalID: -4701420600291217564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Burgundy-Walk_10
+      rect:
+        serializedVersion: 2
+        x: 9653
+        y: 0
+        width: 967
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d4e130915623e40a58b338f20edcb4
+      internalID: -5006208004098355480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Burgundy-Walk_11
+      rect:
+        serializedVersion: 2
+        x: 10613
+        y: 0
+        width: 975
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f77d2ffa9e2a344e83a4abf90f1fc98
+      internalID: 4908672682832541221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

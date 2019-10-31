@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: 0e73ca03f8d5d2c4998f3a89b06c2e20
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2207535862146048489
+    second: chibipum-Walk_0
+  - first:
+      213: -2029697141711222925
+    second: chibipum-Walk_1
+  - first:
+      213: 6865632170542963329
+    second: chibipum-Walk_2
+  - first:
+      213: 211241979622833231
+    second: chibipum-Walk_3
+  - first:
+      213: -2586442792439409730
+    second: chibipum-Walk_4
+  - first:
+      213: -3876434007862896544
+    second: chibipum-Walk_5
+  - first:
+      213: 7498009596690055149
+    second: chibipum-Walk_6
+  - first:
+      213: 762127604663206698
+    second: chibipum-Walk_7
+  - first:
+      213: 8989037873641709917
+    second: chibipum-Walk_8
+  - first:
+      213: -569270402773637739
+    second: chibipum-Walk_9
+  - first:
+      213: 3695644114902767056
+    second: chibipum-Walk_10
+  - first:
+      213: -3869963404377939258
+    second: chibipum-Walk_11
+  - first:
+      213: -5034402191037115086
+    second: chibipum-Walk_12
+  - first:
+      213: -7513666908450251050
+    second: chibipum-Walk_13
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +82,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +112,351 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: chibipum-Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 851
+        height: 1760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b94c0b4f07e164428f3ecc95411a93b
+      internalID: -2207535862146048489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibipum-Walk_1
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 0
+        width: 897
+        height: 1760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2547f55713e9548b3d2cbe45825423
+      internalID: -2029697141711222925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibipum-Walk_2
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 0
+        width: 920
+        height: 1758
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75fe01f2c0abd44c9184beef3d08f67
+      internalID: 6865632170542963329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibipum-Walk_3
+      rect:
+        serializedVersion: 2
+        x: 2742
+        y: 0
+        width: 905
+        height: 1760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e07806785efa44b97ac46c13385cef
+      internalID: 211241979622833231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibipum-Walk_4
+      rect:
+        serializedVersion: 2
+        x: 3617
+        y: 0
+        width: 964
+        height: 1760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53eb1e5582746248a17ddada64f6d18
+      internalID: -2586442792439409730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibipum-Walk_5
+      rect:
+        serializedVersion: 2
+        x: 4574
+        y: 0
+        width: 897
+        height: 1760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b1309a70f6f074fbb1a57928f03456
+      internalID: -3876434007862896544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibipum-Walk_6
+      rect:
+        serializedVersion: 2
+        x: 5449
+        y: 0
+        width: 874
+        height: 1758
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab6aca0aaffe5f45bc83edd48e950ac
+      internalID: 7498009596690055149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibipum-Walk_7
+      rect:
+        serializedVersion: 2
+        x: 6331
+        y: 0
+        width: 934
+        height: 1751
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47e56ba39ac1ac4192f98b81543df9e
+      internalID: 762127604663206698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibipum-Walk_8
+      rect:
+        serializedVersion: 2
+        x: 7303
+        y: 0
+        width: 859
+        height: 1760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fadfaf977de24cf48961580b8537d8e6
+      internalID: 8989037873641709917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibipum-Walk_9
+      rect:
+        serializedVersion: 2
+        x: 8215
+        y: 0
+        width: 919
+        height: 1760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f21c71aea19eb9428169679c10f9001
+      internalID: -569270402773637739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibipum-Walk_10
+      rect:
+        serializedVersion: 2
+        x: 9149
+        y: 24
+        width: 920
+        height: 1734
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a11f8db568394b4383029298c60482c
+      internalID: 3695644114902767056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibipum-Walk_11
+      rect:
+        serializedVersion: 2
+        x: 10061
+        y: 0
+        width: 882
+        height: 1760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca96dd4bf861c5244ab635f7882434c1
+      internalID: -3869963404377939258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibipum-Walk_12
+      rect:
+        serializedVersion: 2
+        x: 10929
+        y: 0
+        width: 912
+        height: 1760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636812ac58db56a4584a51f0f5f6718c
+      internalID: -5034402191037115086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibipum-Walk_13
+      rect:
+        serializedVersion: 2
+        x: 11848
+        y: 0
+        width: 920
+        height: 1743
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05dd7dde116d3a4e9d712f64dda93d0
+      internalID: -7513666908450251050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: 679ab9edae134464aaa509755ccad6c1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4496694502799656508
+    second: chibighost-Walk_0
+  - first:
+      213: -4478205796767664839
+    second: chibighost-Walk_07
+  - first:
+      213: 2147619205732110606
+    second: chibighost-Walk_04
+  - first:
+      213: 3051349669309939851
+    second: chibighost-Walk_05
+  - first:
+      213: -1591677105646085048
+    second: chibighost-Walk_06
+  - first:
+      213: -3191830043356593491
+    second: chibighost-Walk_02
+  - first:
+      213: 8441462974094660919
+    second: chibighost-Walk_03
+  - first:
+      213: 3014118974407068539
+    second: chibighost-Walk_04
+  - first:
+      213: -341952842509002954
+    second: chibighost-Walk_05
+  - first:
+      213: 5672854624863637731
+    second: chibighost-Walk_06
+  - first:
+      213: -370758955607505223
+    second: chibighost-Walk_14
+  - first:
+      213: -5180624797149384176
+    second: chibighost-Walk_14
+  - first:
+      213: -2693705243965999988
+    second: chibighost-Walk_14
+  - first:
+      213: 9213853313107202518
+    second: chibighost-Walk_14
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +82,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +112,351 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: chibighost-Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 816
+        height: 856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27798f2789b7e374c887652d576959d3
+      internalID: -4496694502799656508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibighost-Walk_07
+      rect:
+        serializedVersion: 2
+        x: 4824
+        y: 0
+        width: 792
+        height: 856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69033e6fc1861b24a802483822811553
+      internalID: -4478205796767664839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibighost-Walk_8
+      rect:
+        serializedVersion: 2
+        x: 5633
+        y: 0
+        width: 787
+        height: 856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359f19160a02cca40a73fc2c9f3c59fe
+      internalID: 2147619205732110606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibighost-Walk_9
+      rect:
+        serializedVersion: 2
+        x: 6436
+        y: 0
+        width: 793
+        height: 856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fabfde91d65674e93fe454c07806ac
+      internalID: 3051349669309939851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibighost-Walk_10
+      rect:
+        serializedVersion: 2
+        x: 7240
+        y: 0
+        width: 803
+        height: 856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf1f5016046d22449f1295003b671f4
+      internalID: -1591677105646085048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibighost-Walk_02
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0
+        width: 802
+        height: 856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d992dd265b627df4da6cec23982ad638
+      internalID: -3191830043356593491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibighost-Walk_03
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 0
+        width: 798
+        height: 856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe1c09aea2eebb48aebea994ddb476e
+      internalID: 8441462974094660919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibighost-Walk_04
+      rect:
+        serializedVersion: 2
+        x: 2411
+        y: 0
+        width: 801
+        height: 856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412397fe070988d428fa1a06ae4719c5
+      internalID: 3014118974407068539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibighost-Walk_05
+      rect:
+        serializedVersion: 2
+        x: 3206
+        y: 0
+        width: 815
+        height: 856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992e52cc51298364c9b1489694522917
+      internalID: -341952842509002954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibighost-Walk_06
+      rect:
+        serializedVersion: 2
+        x: 4023
+        y: 8
+        width: 797
+        height: 846
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee235f4ef11320d4db4f951b52fc9b52
+      internalID: 5672854624863637731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibighost-Walk_11
+      rect:
+        serializedVersion: 2
+        x: 8048
+        y: 0
+        width: 789
+        height: 856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f89fdfcd7474eb44b6a358a3ca8cd53
+      internalID: -370758955607505223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibighost-Walk_12
+      rect:
+        serializedVersion: 2
+        x: 8843
+        y: 0
+        width: 825
+        height: 856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6a0949959d964409ba2a84225aa59f
+      internalID: -5180624797149384176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibighost-Walk_13
+      rect:
+        serializedVersion: 2
+        x: 9664
+        y: 0
+        width: 799
+        height: 856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19f69d67505f2d48852704c99777a8e
+      internalID: -2693705243965999988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibighost-Walk_14
+      rect:
+        serializedVersion: 2
+        x: 10469
+        y: 0
+        width: 791
+        height: 856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda8a87bf24520a4691d8018530201f5
+      internalID: 9213853313107202518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

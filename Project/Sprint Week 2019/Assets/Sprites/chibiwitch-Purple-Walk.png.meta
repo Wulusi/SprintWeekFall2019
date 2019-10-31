@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: f2a21e85fdfe6514fa7dc5b2fff1eecd
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6284290503349502675
+    second: chibiwitch-Purple-Walk_0
+  - first:
+      213: -4515767887401074281
+    second: chibiwitch-Purple-Walk_1
+  - first:
+      213: 1077737490691389951
+    second: chibiwitch-Purple-Walk_2
+  - first:
+      213: 8845517006941123957
+    second: chibiwitch-Purple-Walk_3
+  - first:
+      213: 2187299856804520865
+    second: chibiwitch-Purple-Walk_4
+  - first:
+      213: 2541539223864913439
+    second: chibiwitch-Purple-Walk_5
+  - first:
+      213: -56390691106171109
+    second: chibiwitch-Purple-Walk_6
+  - first:
+      213: -2786030960959706666
+    second: chibiwitch-Purple-Walk_7
+  - first:
+      213: -5700668197630892340
+    second: chibiwitch-Purple-Walk_8
+  - first:
+      213: 4951687425259150817
+    second: chibiwitch-Purple-Walk_9
+  - first:
+      213: -4500576967288764434
+    second: chibiwitch-Purple-Walk_10
+  - first:
+      213: 2069503040067511364
+    second: chibiwitch-Purple-Walk_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +76,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +106,309 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: chibiwitch-Purple-Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 979
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f769e05bc89e38f4f8f8e5a270980600
+      internalID: -6284290503349502675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Purple-Walk_1
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 0
+        width: 946
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c168ccb84fd6d4388eae1b9a8b58ae
+      internalID: -4515767887401074281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Purple-Walk_2
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 0
+        width: 994
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84663695e34ad824894efa223eddd88b
+      internalID: 1077737490691389951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Purple-Walk_3
+      rect:
+        serializedVersion: 2
+        x: 2898
+        y: 0
+        width: 966
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7796cb7f4a525f4e9820471c87aec35
+      internalID: 8845517006941123957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Purple-Walk_4
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 0
+        width: 967
+        height: 1741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf85b4ca9a6c87b45978e3e6fb472164
+      internalID: 2187299856804520865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Purple-Walk_5
+      rect:
+        serializedVersion: 2
+        x: 4811
+        y: 0
+        width: 979
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6ed1223603c7b4191e9724bad3c5e0
+      internalID: 2541539223864913439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Purple-Walk_6
+      rect:
+        serializedVersion: 2
+        x: 5790
+        y: 0
+        width: 980
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17002bafd33a3e84d9cdf69b7a9d31bc
+      internalID: -56390691106171109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Purple-Walk_7
+      rect:
+        serializedVersion: 2
+        x: 6764
+        y: 0
+        width: 966
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce374e618401e8b4093c461237fff7db
+      internalID: -2786030960959706666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Purple-Walk_8
+      rect:
+        serializedVersion: 2
+        x: 7717
+        y: 0
+        width: 980
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d8186e68a0fdd4da2412ffce5107fd
+      internalID: -5700668197630892340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Purple-Walk_9
+      rect:
+        serializedVersion: 2
+        x: 8690
+        y: 0
+        width: 953
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80bebddc5866f8f4093eb697be139db8
+      internalID: 4951687425259150817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Purple-Walk_10
+      rect:
+        serializedVersion: 2
+        x: 9663
+        y: 0
+        width: 960
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a94a6b2e6ae5b41a457f58e0e9d6ef
+      internalID: -4500576967288764434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibiwitch-Purple-Walk_11
+      rect:
+        serializedVersion: 2
+        x: 10636
+        y: 0
+        width: 945
+        height: 1745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8d4728cad70404ba576710b9ea0af3
+      internalID: 2069503040067511364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

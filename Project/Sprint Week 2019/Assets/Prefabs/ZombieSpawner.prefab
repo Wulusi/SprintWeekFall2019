@@ -46,12 +46,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseTargets:
   - {fileID: 0}
-  zombiePrefab: {fileID: 8430057151150378414, guid: ebcc451355eaae442984d3bbda86c178,
-    type: 3}
+  zombiePrefabs:
+  - {fileID: 8430057151150378414, guid: ebcc451355eaae442984d3bbda86c178, type: 3}
+  - {fileID: 8430057151150378414, guid: 6aaf4ac0eee5a4a478c7bb4cdd66ead9, type: 3}
+  - {fileID: 8430057151150378414, guid: 1109dc8c972db824298f0732aa76a231, type: 3}
   numZombiesToSpawn: 10
   timeToNextSpawn: 5
   minTimeToSpawn: 2
   maxTimeToSpawn: 5
+  pathOne: []
+  pathTwo: []
+  pathThree: []
+  pathFour: []
 --- !u!1 &8523216597231356553
 GameObject:
   m_ObjectHideFlags: 0
