@@ -1,7 +1,46 @@
 fileFormatVersion: 2
 guid: e432061d2ae9c024cb398aa495b11d66
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2936993469431435890
+    second: chibizom-Walk_0
+  - first:
+      213: -8654109883964326329
+    second: chibizom-Walk_1
+  - first:
+      213: 2139322378511893659
+    second: chibizom-Walk_2
+  - first:
+      213: -5984854713947102172
+    second: chibizom-Walk_3
+  - first:
+      213: -6292663950147450801
+    second: chibizom-Walk_4
+  - first:
+      213: 3240290286371766688
+    second: chibizom-Walk_5
+  - first:
+      213: -7179914292498282831
+    second: chibizom-Walk_6
+  - first:
+      213: -2220425703999474989
+    second: chibizom-Walk_7
+  - first:
+      213: 447086175269148667
+    second: chibizom-Walk_8
+  - first:
+      213: -3515997589740088773
+    second: chibizom-Walk_9
+  - first:
+      213: -7604553410973004846
+    second: chibizom-Walk_10
+  - first:
+      213: -2578912706151216414
+    second: chibizom-Walk_11
+  - first:
+      213: -1996025049596110031
+    second: chibizom-Walk_12
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +79,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +109,330 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: chibizom-Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 790
+        height: 1534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c05af4c4496c147b19807640e2020c
+      internalID: 2936993469431435890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibizom-Walk_1
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 0
+        width: 883
+        height: 1533
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b8a21038a953b40b5c3f42edec5dcd
+      internalID: -8654109883964326329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibizom-Walk_2
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 0
+        width: 805
+        height: 1526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1200c75f7d64e4ba5cec0e5c9bef1b
+      internalID: 2139322378511893659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibizom-Walk_3
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 0
+        width: 932
+        height: 1519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfdaf77d75e912648ae6dd7669594400
+      internalID: -5984854713947102172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibizom-Walk_4
+      rect:
+        serializedVersion: 2
+        x: 3650
+        y: 0
+        width: 890
+        height: 1534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90c055915d69784bbe3436497a7c51b
+      internalID: -6292663950147450801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibizom-Walk_5
+      rect:
+        serializedVersion: 2
+        x: 4562
+        y: 0
+        width: 911
+        height: 1534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938c3ff620acc3449b8e5fadab4828a2
+      internalID: 3240290286371766688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibizom-Walk_6
+      rect:
+        serializedVersion: 2
+        x: 5515
+        y: 0
+        width: 841
+        height: 1534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fec9f8de2e9ba428a2a2fcdf14a617
+      internalID: -7179914292498282831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibizom-Walk_7
+      rect:
+        serializedVersion: 2
+        x: 6469
+        y: 0
+        width: 854
+        height: 1534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1bacf208aa29f54fa078b49b58e44b2
+      internalID: -2220425703999474989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibizom-Walk_8
+      rect:
+        serializedVersion: 2
+        x: 7401
+        y: 0
+        width: 841
+        height: 1534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6bc193da514ffe46915a9b04bcc2520
+      internalID: 447086175269148667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibizom-Walk_9
+      rect:
+        serializedVersion: 2
+        x: 8326
+        y: 0
+        width: 954
+        height: 1534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0158c05d6bb41a248b259c568bdcb99e
+      internalID: -3515997589740088773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibizom-Walk_10
+      rect:
+        serializedVersion: 2
+        x: 9294
+        y: 0
+        width: 961
+        height: 1534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504cc4378f53e1741b1724f59ddc1a79
+      internalID: -7604553410973004846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibizom-Walk_11
+      rect:
+        serializedVersion: 2
+        x: 10248
+        y: 0
+        width: 925
+        height: 1534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13405e344584ae84385a0d445e56701a
+      internalID: -2578912706151216414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chibizom-Walk_12
+      rect:
+        serializedVersion: 2
+        x: 11180
+        y: 0
+        width: 924
+        height: 1534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3fc49a861880a48b6448ec8a90e7c6
+      internalID: -1996025049596110031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -329,6 +329,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6389146183759474429, guid: aeee549be5a087547b7d51043d3b72ff,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeee549be5a087547b7d51043d3b72ff, type: 3}
 --- !u!1 &155796879
@@ -838,6 +843,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ca5e79fd919496e47a77a2b995c54929, type: 2}
+    - target: {fileID: 2533428799610456239, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3874702494877145994, guid: 45ee159694e505a4fa400976f37df60b,
         type: 3}
       propertyPath: m_Controller
@@ -1159,8 +1169,8 @@ MonoBehaviour:
   - {fileID: 1708061623}
   - {fileID: 1295934474}
   zombiePrefabs:
-  - {fileID: 8430057151150378414, guid: a8ffdaadadf92f943960458664bfcebc, type: 3}
-  - {fileID: 8430057151150378414, guid: 69e23cd7d24e49449969f67a6d178145, type: 3}
+  - {fileID: 8430057151150378414, guid: 1109dc8c972db824298f0732aa76a231, type: 3}
+  - {fileID: 8430057151150378414, guid: 6aaf4ac0eee5a4a478c7bb4cdd66ead9, type: 3}
   - {fileID: 8430057151150378414, guid: ebcc451355eaae442984d3bbda86c178, type: 3}
   numZombiesToSpawn: 100
   timeToNextSpawn: 5
@@ -1852,6 +1862,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4a332ab7167c62f42ba555424c75440c,
         type: 3}
+    - target: {fileID: 2533428799610456239, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9018996640751686730, guid: 45ee159694e505a4fa400976f37df60b,
         type: 3}
       propertyPath: m_Sprite
@@ -1967,6 +1982,28 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7495482320563417790, guid: aeee549be5a087547b7d51043d3b72ff,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a7734be295cf4ce4ca6ad4747088e4d8,
+        type: 3}
+    - target: {fileID: 6389146183759474429, guid: aeee549be5a087547b7d51043d3b72ff,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6284290503349502675, guid: f2a21e85fdfe6514fa7dc5b2fff1eecd,
+        type: 3}
+    - target: {fileID: 6389146183759474429, guid: aeee549be5a087547b7d51043d3b72ff,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012629369732613702, guid: aeee549be5a087547b7d51043d3b72ff,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: af12d67179d760d4797b544704423e06, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeee549be5a087547b7d51043d3b72ff, type: 3}
 --- !u!1001 &2032801089
@@ -2087,7 +2124,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pools.Array.data[3].prefab
       value: 
-      objectReference: {fileID: 8430057151150378414, guid: a8ffdaadadf92f943960458664bfcebc,
+      objectReference: {fileID: 8430057151150378414, guid: 1109dc8c972db824298f0732aa76a231,
         type: 3}
     - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
         type: 3}
@@ -2103,7 +2140,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pools.Array.data[4].prefab
       value: 
-      objectReference: {fileID: 8430057151150378414, guid: 69e23cd7d24e49449969f67a6d178145,
+      objectReference: {fileID: 8430057151150378414, guid: 6aaf4ac0eee5a4a478c7bb4cdd66ead9,
         type: 3}
     - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
         type: 3}
