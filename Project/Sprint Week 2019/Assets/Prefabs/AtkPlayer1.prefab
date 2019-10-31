@@ -182,7 +182,7 @@ MonoBehaviour:
   firedShot: {fileID: 0}
   hasShot: 0
   autoFire: 0
-  currentElement: {fileID: 0}
+  currentElement: {fileID: 11400000, guid: 7162764f0e054a64f8c23bd19e94757c, type: 2}
   elementColour: {r: 0, g: 0, b: 0, a: 0}
   weaponParams: {fileID: 11400000, guid: 796fcccf0bef0524e80961c29cab45a6, type: 2}
   localScale: 0
@@ -523,7 +523,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -560561996260607499, guid: f49834ab292dfc54da9f3d815a9390d3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 9.668429, y: 17.449999}

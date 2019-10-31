@@ -65,7 +65,7 @@ public class ChargedShotTest : MonoBehaviour
         {
             if (!hasShot)
             {
-                firedShot = PoolManager.Instance.SpawnFromPool(shot.name, barrel.transform.position + transform.up, Quaternion.identity);
+                firedShot = PoolManager.Instance.SpawnFromPool(shot.name, barrel.transform.position + barrel.transform.up, Quaternion.identity);
                 firedShot.GetComponent<BulletDmg>().elementType = currentElement;
                 firedShot.GetComponent<SpriteRenderer>().color = elementColour;
                 hasShot = true;
@@ -75,7 +75,7 @@ public class ChargedShotTest : MonoBehaviour
             {
                 if (firedShot != null)
                 {
-                    firedShot.transform.position = transform.position + transform.up;
+                    firedShot.transform.position = barrel.transform.position + barrel.transform.up;
                     localScale += (Time.deltaTime * triggerFloatRight * chargeSpeed);
                     localScale = Mathf.Clamp(localScale, minShotSize, maxShotSize);
                     firedShot.transform.localScale = new Vector3(localScale, localScale, localScale);
@@ -88,7 +88,7 @@ public class ChargedShotTest : MonoBehaviour
         {
             if (firedShot != null)
             {
-                firedShot.transform.position = transform.position + transform.up;
+                firedShot.transform.position = barrel.transform.position + barrel.transform.up;
                 localScale -= (Time.deltaTime);
                 localScale = Mathf.Clamp(localScale, minShotSize, maxShotSize);
                 firedShot.transform.localScale = new Vector3(localScale, localScale, localScale);
@@ -101,17 +101,17 @@ public class ChargedShotTest : MonoBehaviour
         {
             if (!hasShot)
             {
-                firedShot = PoolManager.Instance.SpawnFromPool(shot.name, transform.position + transform.up, Quaternion.identity);
+                firedShot = PoolManager.Instance.SpawnFromPool(shot.name, barrel.transform.position + barrel.transform.up, Quaternion.identity);
                 firedShot.GetComponent<BulletDmg>().elementType = currentElement;
                 firedShot.GetComponent<SpriteRenderer>().color = elementColour;
                 hasShot = true;
-                firedShot.transform.position = transform.position + transform.up;
+                firedShot.transform.position = barrel.transform.position + barrel.transform.up;
             }
             else
             {
                 if (firedShot != null)
                 {
-                    firedShot.transform.position = transform.position + transform.up;
+                    firedShot.transform.position = barrel.transform.position + barrel.transform.up;
                     localScale += (Time.deltaTime * triggerFloatLeft * chargeSpeed);
                     localScale = Mathf.Clamp(localScale, minShotSize, maxShotSize);
                     firedShot.transform.localScale = new Vector3(localScale, localScale, localScale);
@@ -138,7 +138,7 @@ public class ChargedShotTest : MonoBehaviour
             if (triggerFloatRight <= 0)
             {
                 hasShot = true;
-                shot.GetComponent<Rigidbody2D>().velocity = transform.up * shotSpeed;
+                shot.GetComponent<Rigidbody2D>().velocity = barrel.transform.up * shotSpeed;
                 firedShot = null;
                 autoFire = false;
                 StartCoroutine(CountDown(shotCoolDown));
@@ -157,7 +157,7 @@ public class ChargedShotTest : MonoBehaviour
         {
             hasShot = true;
             shot.transform.localScale = new Vector3(localScale, localScale, localScale);
-            shot.GetComponent<Rigidbody2D>().velocity = transform.up * shotSpeed;
+            shot.GetComponent<Rigidbody2D>().velocity = barrel.transform.up * shotSpeed;
             firedShot = null;
 
             if (firedShot == null)
@@ -173,7 +173,7 @@ public class ChargedShotTest : MonoBehaviour
             {
                 hasShot = true;
                 shot.transform.localScale = new Vector3(localScale, localScale, localScale);
-                shot.GetComponent<Rigidbody2D>().velocity = transform.up * shotSpeed;
+                shot.GetComponent<Rigidbody2D>().velocity = barrel.transform.up * shotSpeed;
                 firedShot = null;
                 StartCoroutine(CountDown(shotCoolDown * 0.1f));
                 burstShotsLeft--;
