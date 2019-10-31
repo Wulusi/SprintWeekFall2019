@@ -10,6 +10,7 @@ public class ChargedShotTest : MonoBehaviour
     public GameObject shot, firedShot;
     public bool hasShot, autoFire;
     public Element currentElement;
+    public Color elementColour;
     public sObj_WeaponParams weaponParams;
 
     [HideInInspector]

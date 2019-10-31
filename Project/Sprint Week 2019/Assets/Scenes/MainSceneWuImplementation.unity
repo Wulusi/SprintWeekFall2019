@@ -2334,6 +2334,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8709014696741311765, guid: 7711fab347ed46d45aa1cd4d9204b542,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.1254902
+      objectReference: {fileID: 0}
     - target: {fileID: 5972466082068332468, guid: 7711fab347ed46d45aa1cd4d9204b542,
         type: 3}
       propertyPath: m_Sprite

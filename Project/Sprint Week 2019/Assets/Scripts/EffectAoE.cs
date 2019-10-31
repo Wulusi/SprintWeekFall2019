@@ -7,22 +7,48 @@ public class EffectAoE : MonoBehaviour
     public Element thisElement;
     public Element neutralElement;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public CircleCollider2D circleOfEffect;
+
+    public float colliderRadius;
+
+    public Color shotColour;
+
+    private void Start()
     {
-        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Players"))
+        GetData();
+    }
+
+    private void GetData()
+    {
+        circleOfEffect = GetComponent<CircleCollider2D>();
+        circleOfEffect.radius = colliderRadius;
+        shotColour = transform.GetChild(0).GetComponent<SpriteRenderer>().color;
+
+        var ConvertedMarkerRadius = colliderRadius / 2.6f;
+
+        transform.GetChild(1).GetComponent<Transform>().localScale = new Vector3(ConvertedMarkerRadius, ConvertedMarkerRadius, ConvertedMarkerRadius);
+
+        var transparentAoe = shotColour;
+        transparentAoe.a = 0.5f;
+        transform.GetChild(1).GetComponent<SpriteRenderer>().color = transparentAoe;
+    }
+
+    private void OnTriggerEnter2D(Collider2D obj)
+    {
+        if (obj.gameObject.layer == LayerMask.NameToLayer("Players"))
         {
-            if (collision.collider.GetComponent<ChargedShotTest>())
+            if (obj.GetComponent<ChargedShotTest>())
             {
-                collision.collider.GetComponent<ChargedShotTest>().currentElement = thisElement;
+                obj.GetComponent<ChargedShotTest>().currentElement = thisElement;
             }
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D obj)
     {
-        if (collision.collider.GetComponent<ChargedShotTest>())
+        if (obj.GetComponent<ChargedShotTest>())
         {
-            collision.collider.GetComponent<ChargedShotTest>().currentElement = neutralElement;
+            obj.GetComponent<ChargedShotTest>().currentElement = neutralElement;
         }
     }
 }
