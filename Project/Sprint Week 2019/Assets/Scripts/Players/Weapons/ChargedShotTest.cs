@@ -47,6 +47,7 @@ public class ChargedShotTest : MonoBehaviour
         shotSpeed = weaponParams._shotSpeed;
         minShotThreshold = weaponParams._minShotThreshold;
         shot = weaponParams.playerShot;
+        elementColour = Color.yellow;
     }
 
 
