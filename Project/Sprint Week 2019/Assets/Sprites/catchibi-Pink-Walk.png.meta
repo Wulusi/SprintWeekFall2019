@@ -1,0 +1,427 @@
+fileFormatVersion: 2
+guid: 4e66f1c08215be249888b120c563ff56
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9181768617456111839
+    second: catchibi-Pink-Walk_0
+  - first:
+      213: 6681734449649368840
+    second: catchibi-Pink-Walk_1
+  - first:
+      213: 7511668524432008589
+    second: catchibi-Pink-Walk_2
+  - first:
+      213: 2475316649776914070
+    second: catchibi-Pink-Walk_3
+  - first:
+      213: 7694785839634787112
+    second: catchibi-Pink-Walk_4
+  - first:
+      213: 3663663776601195918
+    second: catchibi-Pink-Walk_5
+  - first:
+      213: 6715132374877953399
+    second: catchibi-Pink-Walk_6
+  - first:
+      213: -7533278740757298556
+    second: catchibi-Pink-Walk_7
+  - first:
+      213: -904509830951009267
+    second: catchibi-Pink-Walk_8
+  - first:
+      213: -2153697778624565643
+    second: catchibi-Pink-Walk_9
+  - first:
+      213: -2304013347724356277
+    second: catchibi-Pink-Walk_10
+  - first:
+      213: -8968594675269677446
+    second: catchibi-Pink-Walk_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: catchibi-Pink-Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 967
+        height: 1562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143b9300e0db7bc438df56cc400afb9c
+      internalID: -9181768617456111839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catchibi-Pink-Walk_1
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 0
+        width: 976
+        height: 1562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2155940aec764794f9fd81d8239b3922
+      internalID: 6681734449649368840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catchibi-Pink-Walk_2
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 0
+        width: 970
+        height: 1562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e108fb0405e3864aa2346cfb86389bc
+      internalID: 7511668524432008589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catchibi-Pink-Walk_3
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 0
+        width: 968
+        height: 1562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37d1c6afbd7e0941958b427ed7858ba
+      internalID: 2475316649776914070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catchibi-Pink-Walk_4
+      rect:
+        serializedVersion: 2
+        x: 4030
+        y: 0
+        width: 969
+        height: 1562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad40191904c6a644a165b0aca2f08fb
+      internalID: 7694785839634787112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catchibi-Pink-Walk_5
+      rect:
+        serializedVersion: 2
+        x: 5041
+        y: 0
+        width: 969
+        height: 1562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0d0d220319b5442953c4ff72b8b608
+      internalID: 3663663776601195918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catchibi-Pink-Walk_6
+      rect:
+        serializedVersion: 2
+        x: 6046
+        y: 0
+        width: 975
+        height: 1562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda0095d0ae1b3c49a8f37844aa5248a
+      internalID: 6715132374877953399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catchibi-Pink-Walk_7
+      rect:
+        serializedVersion: 2
+        x: 7057
+        y: 0
+        width: 975
+        height: 1562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d57ac5ac89b36141b081638ac9556ec
+      internalID: -7533278740757298556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catchibi-Pink-Walk_8
+      rect:
+        serializedVersion: 2
+        x: 8068
+        y: 0
+        width: 975
+        height: 1562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5686e5d84330084d8f4a3ed5d10b652
+      internalID: -904509830951009267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catchibi-Pink-Walk_9
+      rect:
+        serializedVersion: 2
+        x: 9073
+        y: 0
+        width: 1005
+        height: 1562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c00c8fcec129814f86a9c776b94859f
+      internalID: -2153697778624565643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catchibi-Pink-Walk_10
+      rect:
+        serializedVersion: 2
+        x: 10091
+        y: 0
+        width: 1011
+        height: 1562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 1007, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbff64a537f2614c96cb743ce6e73d3
+      internalID: -2304013347724356277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catchibi-Pink-Walk_11
+      rect:
+        serializedVersion: 2
+        x: 11098
+        y: 0
+        width: 1003
+        height: 1562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c604c4b882e3c41b86ba6110f8e307
+      internalID: -8968594675269677446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

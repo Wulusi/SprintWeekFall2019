@@ -5,6 +5,7 @@ using GamepadInput;
 public class PlayerMotor : MonoBehaviour
 {
     public GamePad.Index playerIndex;
+    public GameObject targetArm;
     public Rigidbody2D rb;
     public Vector2 moveDir;
     public Vector2 lastMoveDir;
@@ -51,7 +52,7 @@ public class PlayerMotor : MonoBehaviour
 
         //rb.velocity = lastMoveDir.normalized * currentSpeed;
         rb.velocity = Vector2.Lerp(rb.velocity, lastMoveDir.normalized * currentSpeed, 0.1f);
-        transform.rotation = Quaternion.Euler(0,0, - Mathf.Atan2(lastAimDir.normalized.x, lastAimDir.normalized.y) * Mathf.Rad2Deg);
+        targetArm.transform.rotation = Quaternion.Euler(0,0, - Mathf.Atan2(lastAimDir.normalized.x, lastAimDir.normalized.y) * Mathf.Rad2Deg);
     }
 
     public void CheckInput()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ZombieSpawner : MonoBehaviour
 {
     public GameObject[] baseTargets;
-    public GameObject zombiePrefab;
+    public GameObject[] zombiePrefabs;
     public int numZombiesToSpawn;
     public float timeToNextSpawn;
     public float minTimeToSpawn;
@@ -37,7 +37,7 @@ public class ZombieSpawner : MonoBehaviour
 
                 //GameObject newZombie = Instantiate(zombiePrefab, spawnPos, Quaternion.identity);
 
-                GameObject newZombie = PoolManager.Instance.SpawnFromPool(zombiePrefab.name, spawnPos, Quaternion.identity);
+                GameObject newZombie = PoolManager.Instance.SpawnFromPool(zombiePrefabs[Mathf.FloorToInt(Random.Range(0,3))].name, spawnPos, Quaternion.identity);
 
                 //find closest target base and walk there
                 //int indexWithShortestDistance = 0;

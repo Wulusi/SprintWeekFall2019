@@ -14,12 +14,17 @@ public class DefenseKnockback : MonoBehaviour
     public float cooldownTimer;
     public float knockbackRadius = 3;
     public bool debugLines;
+    public Image knockbackTimer;
+    public GameObject knockbackObject;
+    SpriteRenderer knockbackSprite;
 
     Rigidbody2D rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        knockbackTimer.fillAmount = 0;
+        knockbackSprite = knockbackObject.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -72,11 +77,24 @@ public class DefenseKnockback : MonoBehaviour
     IEnumerator KnockbackCooldown()
     {
         float tempTimer = 0;
+        float expandTimer = 0;
+        float fadeTimer = 1.0f;
+        float expandRadius = knockbackRadius * 6;
+        knockbackSprite.color = new Color(knockbackSprite.color.r, knockbackSprite.color.g, knockbackSprite.color.b, 1.0f);
         while (tempTimer < cooldownTimer)
         {
+            knockbackObject.transform.localScale = new Vector2(Mathf.Lerp(0, expandRadius, expandTimer), Mathf.Lerp(0, expandRadius, expandTimer));
+            knockbackTimer.fillAmount = tempTimer / cooldownTimer;
+            if (expandTimer<cooldownTimer/2) expandTimer += Time.deltaTime*10f;
+            else
+            {
+                knockbackSprite.color = new Color(knockbackSprite.color.r, knockbackSprite.color.g, knockbackSprite.color.b, Mathf.Lerp(0.0f, 1.0f, fadeTimer));
+                fadeTimer -= Time.deltaTime;
+            }
             tempTimer += Time.deltaTime;
             yield return null;
         }
+        knockbackTimer.fillAmount = 0;
         ready = true;
     }
 }
