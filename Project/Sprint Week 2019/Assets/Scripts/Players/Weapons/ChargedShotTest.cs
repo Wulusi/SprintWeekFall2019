@@ -16,7 +16,10 @@ public class ChargedShotTest : MonoBehaviour
     public float localScale, maxShotSize, minShotSize, minShotThreshold, chargeSpeed, shotCoolDown, shotSpeed;
 
     public float triggerFloatRight, triggerFloatLeft;
-
+    public int numShotsInBurst;
+    public int burstShotsLeft;
+    public float timeBetweenBursts;
+    public float burstTimer;
     public Transform barrel;
 
     // Start is called before the first frame update
@@ -96,6 +99,7 @@ public class ChargedShotTest : MonoBehaviour
             if (!hasShot)
             {
                 firedShot = PoolManager.Instance.SpawnFromPool(shot.name, transform.position + transform.up, Quaternion.identity);
+                firedShot.GetComponent<BulletDmg>().elementType = currentElement;
                 hasShot = true;
                 firedShot.transform.position = transform.position + transform.up;
             }
@@ -161,11 +165,23 @@ public class ChargedShotTest : MonoBehaviour
         }
         else if (shotSize >= minShotThreshold * 0.5f && autoFire)
         {
-            hasShot = true;
-            shot.transform.localScale = new Vector3(localScale, localScale, localScale);
-            shot.GetComponent<Rigidbody2D>().velocity = transform.up * shotSpeed;
-            firedShot = null;
-            StartCoroutine(CountDown(shotCoolDown * 0.1f));
+            if (burstShotsLeft > 0)
+            {
+                hasShot = true;
+                shot.transform.localScale = new Vector3(localScale, localScale, localScale);
+                shot.GetComponent<Rigidbody2D>().velocity = transform.up * shotSpeed;
+                firedShot = null;
+                StartCoroutine(CountDown(shotCoolDown * 0.1f));
+                burstShotsLeft--;
+            } else
+            {
+                burstTimer += Time.deltaTime;
+                if (burstTimer > timeBetweenBursts)
+                {
+                    burstShotsLeft = numShotsInBurst;
+                    burstTimer = 0;
+                }
+            }
         }
     }
 
