@@ -47,5 +47,21 @@ MonoBehaviour:
   - tag: bullet
     prefab: {fileID: 4237718671944597116, guid: ba4179db532fe6f4985b16003dbf6d58,
       type: 3}
-    size: 10
+    size: 100
+  - tag: zombie
+    prefab: {fileID: 8430057151150378414, guid: ebcc451355eaae442984d3bbda86c178,
+      type: 3}
+    size: 100
+  - tag: obstacle
+    prefab: {fileID: 1282958123816497461, guid: e9b93559a5d0f0b45bb86e70e93d1164,
+      type: 3}
+    size: 100
+  - tag: ghost
+    prefab: {fileID: 8430057151150378414, guid: 1109dc8c972db824298f0732aa76a231,
+      type: 3}
+    size: 100
+  - tag: pumpkin
+    prefab: {fileID: 8430057151150378414, guid: 6aaf4ac0eee5a4a478c7bb4cdd66ead9,
+      type: 3}
+    size: 100
   targetParent: {fileID: 5388397781080973353}

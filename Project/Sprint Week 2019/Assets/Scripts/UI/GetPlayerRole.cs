@@ -8,18 +8,18 @@ public class GetPlayerRole : MonoBehaviour
     ChargedShotTest chargedShotTest;
     PlaceBarrier placeBarrier;
 
-    public Text text;
+    public Text playerText;
     // Start is called before the first frame update
     void Start()
     {
-        text = GetComponent<Text>();
+        playerText = GetComponent<Text>();
         StartCoroutine(waitToGetData());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     IEnumerator waitToGetData()
@@ -35,7 +35,8 @@ public class GetPlayerRole : MonoBehaviour
         if (getAttackerComponent)
         {
             chargedShotTest = GetComponentInParent<ChargedShotTest>();
-            text.text = "Atk Player " + chargedShotTest.playerIndex.ToString();
+            GetID(chargedShotTest.playerIndex.ToString());
+
         }
 
         var getDefenderComponent = GetComponentInParent<PlaceBarrier>();
@@ -43,7 +44,30 @@ public class GetPlayerRole : MonoBehaviour
         if (getDefenderComponent)
         {
             placeBarrier = GetComponentInParent<PlaceBarrier>();
-            text.text = "Def Player " + placeBarrier.playerIndex.ToString();
+            GetID(placeBarrier.playerIndex.ToString());
         }
+    }
+    void GetID(string text)
+    {
+        if (text == "One")
+        {
+            playerText.text = "P1";
+        }
+
+        if (text == "Two")
+        {
+            playerText.text = "P2";
+        }
+
+        if (text == "Three")
+        {
+            playerText.text = "P3";
+        }
+
+        if (text == "Four")
+        {
+            playerText.text = "P4";
+        }
+
     }
 }

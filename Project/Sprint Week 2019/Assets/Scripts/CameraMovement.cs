@@ -68,9 +68,9 @@ public class CameraMovement : MonoBehaviour
 
         avgPos.z = -10;
 
-        transform.position = Vector3.Lerp(transform.position, avgPos, smoothing);
+        transform.position = Vector3.Lerp(transform.position + offset, avgPos, smoothing);
 
-        transform.position = Vector3.SmoothDamp(transform.position, avgPos, ref velocity, smoothing);
+        transform.position = Vector3.SmoothDamp(transform.position + offset, avgPos, ref velocity, smoothing);
     }
 
     void ZoomCamera()
