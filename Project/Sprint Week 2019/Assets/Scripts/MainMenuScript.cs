@@ -47,7 +47,7 @@ public class MainMenuScript : MonoBehaviour
         {
             if (buttonPressA)
             {
-                if (slider.value == 0) SceneManager.LoadScene("MainScene");
+                if (slider.value == 0) SceneManager.LoadScene("Controls");
                 else if (slider.value == 1) Application.Quit();
             }
 
