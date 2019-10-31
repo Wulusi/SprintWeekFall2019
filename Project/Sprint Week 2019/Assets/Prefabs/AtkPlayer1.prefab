@@ -138,7 +138,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2887254870734218948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIndex: 1
-  targetArm: {fileID: 0}
+  targetArm: {fileID: 6743509770848791149}
   rb: {fileID: 2887254870734219001}
   moveDir: {x: 0, y: 0}
   lastMoveDir: {x: 0, y: 0}
@@ -183,6 +183,7 @@ MonoBehaviour:
   hasShot: 0
   autoFire: 0
   currentElement: {fileID: 0}
+  elementColour: {r: 0, g: 0, b: 0, a: 0}
   weaponParams: {fileID: 11400000, guid: 796fcccf0bef0524e80961c29cab45a6, type: 2}
   localScale: 0
   maxShotSize: 2
@@ -197,7 +198,7 @@ MonoBehaviour:
   burstShotsLeft: 5
   timeBetweenBursts: 3
   burstTimer: 0
-  barrel: {fileID: 0}
+  barrel: {fileID: 4267561289357837289}
 --- !u!114 &8041201838985643525
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -943,6 +943,90 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1860990920}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &809143192
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6138350487149870005, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: m_Name
+      value: ZombieSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138350487149870006, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138350487149870006, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138350487149870006, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138350487149870006, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138350487149870006, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138350487149870006, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138350487149870006, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138350487149870006, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138350487149870006, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138350487149870006, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138350487149870006, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138350487149870007, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: baseTargets.Array.data[0]
+      value: 
+      objectReference: {fileID: 1708061623}
+    - target: {fileID: 6138350487149870007, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: baseTargets.Array.data[1]
+      value: 
+      objectReference: {fileID: 366250710}
+    - target: {fileID: 6138350487149870007, guid: 485f0b5b7d9476d41ae656faa9d91c1e,
+        type: 3}
+      propertyPath: baseTargets.Array.data[2]
+      value: 
+      objectReference: {fileID: 1295934474}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 485f0b5b7d9476d41ae656faa9d91c1e, type: 3}
 --- !u!1001 &815343016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1104,181 +1188,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 503160566}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1022112664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1022112666}
-  - component: {fileID: 1022112665}
-  m_Layer: 0
-  m_Name: ZombieSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1022112665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022112664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05de9ace7dd3f6e4fbc7503b0140661c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseTargets:
-  - {fileID: 366250710}
-  - {fileID: 1708061623}
-  - {fileID: 1295934474}
-  zombiePrefab: {fileID: 8430057151150378414, guid: ebcc451355eaae442984d3bbda86c178,
-    type: 3}
-  numZombiesToSpawn: 100
-  timeToNextSpawn: 5
-  minTimeToSpawn: 1
-  maxTimeToSpawn: 3
-  pathOne:
-  - {x: 12.5, y: 1.5}
-  - {x: 11.5, y: 1.5}
-  - {x: 10.5, y: 1.5}
-  - {x: 9.5, y: 1.5}
-  - {x: 8.5, y: 1.5}
-  - {x: 7.5, y: 1.5}
-  - {x: 6.5, y: 1.5}
-  - {x: 5.5, y: 1.5}
-  - {x: 4.5, y: 1.5}
-  - {x: 3.5, y: 1.5}
-  - {x: 3.5, y: 2.5}
-  - {x: 3.5, y: 3.5}
-  - {x: 3.5, y: 4.5}
-  - {x: 4.5, y: 4.5}
-  - {x: 5.5, y: 4.5}
-  - {x: 6.5, y: 4.5}
-  - {x: 7.5, y: 4.5}
-  - {x: 8.5, y: 4.5}
-  - {x: 9.5, y: 4.5}
-  - {x: 10.5, y: 4.5}
-  - {x: 10.5, y: 5.5}
-  - {x: 10.5, y: 6.5}
-  - {x: 10.5, y: 7.5}
-  - {x: 9.5, y: 7.5}
-  - {x: 8.5, y: 7.5}
-  - {x: 7.5, y: 7.5}
-  - {x: 6.5, y: 7.5}
-  - {x: 5.5, y: 7.5}
-  - {x: 4.5, y: 7.5}
-  - {x: 3.5, y: 7.5}
-  - {x: 2.5, y: 7.5}
-  - {x: 1.5, y: 7.5}
-  pathTwo:
-  - {x: 12.5, y: 4.5}
-  - {x: 11.5, y: 4.5}
-  - {x: 10.5, y: 4.5}
-  - {x: 10.5, y: 3.5}
-  - {x: 10.5, y: 2.5}
-  - {x: 10.5, y: 1.5}
-  - {x: 9.5, y: 1.5}
-  - {x: 8.5, y: 1.5}
-  - {x: 7.5, y: 1.5}
-  - {x: 6.5, y: 1.5}
-  - {x: 5.5, y: 1.5}
-  - {x: 4.5, y: 1.5}
-  - {x: 4.5, y: 2.5}
-  - {x: 4.5, y: 3.5}
-  - {x: 4.5, y: 4.5}
-  - {x: 3.5, y: 4.5}
-  - {x: 2.5, y: 4.5}
-  - {x: 1.5, y: 4.5}
-  pathThree:
-  - {x: 12.5, y: 4.5}
-  - {x: 11.5, y: 4.5}
-  - {x: 10.5, y: 4.5}
-  - {x: 10.5, y: 5.5}
-  - {x: 10.5, y: 6.5}
-  - {x: 10.5, y: 7.5}
-  - {x: 9.5, y: 7.5}
-  - {x: 8.5, y: 7.5}
-  - {x: 7.5, y: 7.5}
-  - {x: 6.5, y: 7.5}
-  - {x: 5.5, y: 7.5}
-  - {x: 4.5, y: 7.5}
-  - {x: 4.5, y: 6.5}
-  - {x: 4.5, y: 5.5}
-  - {x: 4.5, y: 4.5}
-  - {x: 3.5, y: 4.5}
-  - {x: 2.5, y: 4.5}
-  - {x: 1.5, y: 4.5}
-  pathFour:
-  - {x: 12.5, y: 7.5}
-  - {x: 11.5, y: 7.5}
-  - {x: 11.5, y: 6.5}
-  - {x: 11.5, y: 5.5}
-  - {x: 11.5, y: 4.5}
-  - {x: 11.5, y: 3.5}
-  - {x: 11.5, y: 2.5}
-  - {x: 11.5, y: 1.5}
-  - {x: 11.5, y: 0.5}
-  - {x: 10.5, y: 0.5}
-  - {x: 9.5, y: 0.5}
-  - {x: 9.5, y: 1.5}
-  - {x: 9.5, y: 2.5}
-  - {x: 9.5, y: 3.5}
-  - {x: 9.5, y: 4.5}
-  - {x: 9.5, y: 5.5}
-  - {x: 9.5, y: 6.5}
-  - {x: 9.5, y: 7.5}
-  - {x: 9.5, y: 8.5}
-  - {x: 8.5, y: 8.5}
-  - {x: 7.5, y: 8.5}
-  - {x: 7.5, y: 7.5}
-  - {x: 7.5, y: 6.5}
-  - {x: 7.5, y: 5.5}
-  - {x: 7.5, y: 4.5}
-  - {x: 7.5, y: 3.5}
-  - {x: 7.5, y: 2.5}
-  - {x: 7.5, y: 1.5}
-  - {x: 7.5, y: 0.5}
-  - {x: 6.5, y: 0.5}
-  - {x: 5.5, y: 0.5}
-  - {x: 5.5, y: 1.5}
-  - {x: 5.5, y: 2.5}
-  - {x: 5.5, y: 3.5}
-  - {x: 5.5, y: 4.5}
-  - {x: 5.5, y: 5.5}
-  - {x: 5.5, y: 6.5}
-  - {x: 5.5, y: 7.5}
-  - {x: 5.5, y: 8.5}
-  - {x: 4.5, y: 8.5}
-  - {x: 3.5, y: 8.5}
-  - {x: 3.5, y: 7.5}
-  - {x: 3.5, y: 6.5}
-  - {x: 3.5, y: 5.5}
-  - {x: 3.5, y: 4.5}
-  - {x: 3.5, y: 3.5}
-  - {x: 3.5, y: 2.5}
-  - {x: 3.5, y: 1.5}
-  - {x: 2.5, y: 1.5}
-  - {x: 1.5, y: 1.5}
---- !u!4 &1022112666
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022112664}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1109678436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2887254870734219003, guid: aeee549be5a087547b7d51043d3b72ff,
@@ -1993,7 +1902,7 @@ PrefabInstance:
     - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
         type: 3}
       propertyPath: pools.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
         type: 3}
@@ -2019,17 +1928,49 @@ PrefabInstance:
     - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
         type: 3}
       propertyPath: pools.Array.data[2].tag
-      value: obstacle
+      value: pumpkin
       objectReference: {fileID: 0}
     - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
         type: 3}
       propertyPath: pools.Array.data[2].prefab
       value: 
-      objectReference: {fileID: 1282958123816497461, guid: e9b93559a5d0f0b45bb86e70e93d1164,
+      objectReference: {fileID: 8430057151150378414, guid: 6aaf4ac0eee5a4a478c7bb4cdd66ead9,
         type: 3}
     - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
         type: 3}
       propertyPath: pools.Array.data[2].size
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
+        type: 3}
+      propertyPath: pools.Array.data[3].tag
+      value: obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
+        type: 3}
+      propertyPath: pools.Array.data[3].prefab
+      value: 
+      objectReference: {fileID: 1282958123816497461, guid: e9b93559a5d0f0b45bb86e70e93d1164,
+        type: 3}
+    - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
+        type: 3}
+      propertyPath: pools.Array.data[3].size
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
+        type: 3}
+      propertyPath: pools.Array.data[4].tag
+      value: ghost
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
+        type: 3}
+      propertyPath: pools.Array.data[4].prefab
+      value: 
+      objectReference: {fileID: 8430057151150378414, guid: 1109dc8c972db824298f0732aa76a231,
+        type: 3}
+    - target: {fileID: 5388397781080973354, guid: bfb9184757aa547498a700bc38406e81,
+        type: 3}
+      propertyPath: pools.Array.data[4].size
       value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []

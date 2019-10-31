@@ -40,6 +40,7 @@ public class EffectAoE : MonoBehaviour
             if (obj.GetComponent<ChargedShotTest>())
             {
                 obj.GetComponent<ChargedShotTest>().currentElement = thisElement;
+                obj.GetComponent<ChargedShotTest>().elementColour = shotColour;
             }
         }
     }
@@ -49,6 +50,7 @@ public class EffectAoE : MonoBehaviour
         if (obj.GetComponent<ChargedShotTest>())
         {
             obj.GetComponent<ChargedShotTest>().currentElement = neutralElement;
+            obj.GetComponent<ChargedShotTest>().elementColour = Color.yellow;
         }
     }
 }

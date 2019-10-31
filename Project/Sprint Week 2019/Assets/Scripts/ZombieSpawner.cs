@@ -37,7 +37,7 @@ public class ZombieSpawner : MonoBehaviour
 
                 //GameObject newZombie = Instantiate(zombiePrefab, spawnPos, Quaternion.identity);
 
-                GameObject newZombie = PoolManager.Instance.SpawnFromPool(zombiePrefabs[Mathf.FloorToInt(Random.Range(0,3))].name, spawnPos, Quaternion.identity);
+                GameObject newZombie = PoolManager.Instance.SpawnFromPool(zombiePrefabs[(Random.Range(0,zombiePrefabs.Length))].name, spawnPos, Quaternion.identity);
 
                 //find closest target base and walk there
                 //int indexWithShortestDistance = 0;
