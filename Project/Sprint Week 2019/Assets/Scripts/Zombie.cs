@@ -15,28 +15,49 @@ public class Zombie : MonoBehaviour
     public Rigidbody2D rb;
     public float damageVal, forcePushAmt;
 
+    ZombieSpawner zombieSpawnerInstance;
+
     public bool isAtEnd;
+    bool baseDestroyed;
+    Vector2 nextBase;
 
     private void Start()
     {
         isAtEnd = false;
+        zombieSpawnerInstance = GameObject.Find("ZombieSpawner").GetComponent<ZombieSpawner>();
     }
 
     private void Update()
     {
 
-        dirToWalk = pathToFollow[targetPoint] - (Vector2)transform.position;
+        if (isAtEnd)
+        {
+            Vector2 nextNearestBase = Vector2.positiveInfinity;
+            for (int i = 0;i<zombieSpawnerInstance.baseTargets.Length; i++)
+            {
+                if (zombieSpawnerInstance.baseTargets[i].activeSelf)
+                {
+                    if (Vector2.Distance(rb.position, zombieSpawnerInstance.baseTargets[i].transform.position) < Vector2.Distance(rb.position, nextNearestBase))
+                    {
+                        nextNearestBase = zombieSpawnerInstance.baseTargets[i].transform.position;
+                    }
+                }
+            }
+            dirToWalk = (Vector2) nextNearestBase - (Vector2) transform.position;
+        }
+
+        else dirToWalk = pathToFollow[targetPoint] - (Vector2)transform.position;
         rb.velocity = Vector2.Lerp(rb.velocity, dirToWalk.normalized * walkSpd, 0.1f);
 
-        List<GameObject> allBasesLeft = new List<GameObject>();
+        GameObject[] allBasesLeft = GameObject.FindGameObjectsWithTag("Base");
 
         //GameObject.FindGameObjectsWithTag("Base");
-        //if (allBasesLeft.Length == 0)
-        //{
-        //    SceneManager.LoadScene("MainMenu");
+        if (allBasesLeft.Length == 0)
+        {
+            SceneManager.LoadScene("MainMenu");
 
 
-        //}
+        }
 
         if (Vector2.Distance(pathToFollow[targetPoint], transform.position) < 0.1f && !isAtEnd)
         {
@@ -46,6 +67,7 @@ public class Zombie : MonoBehaviour
 
                 if(targetPoint >= pathToFollow.Length - 1)
                 {
+                    Debug.Log("Beep");
                     isAtEnd = true;
                 }
             }
