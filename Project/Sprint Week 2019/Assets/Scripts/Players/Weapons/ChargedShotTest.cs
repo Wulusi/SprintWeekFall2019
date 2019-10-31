@@ -155,7 +155,7 @@ public class ChargedShotTest : MonoBehaviour
 
     void ShootShot(float shotSize, GameObject shot)
     {
-        if (shotSize >= minShotThreshold && !autoFire)
+        if (shotSize >= minShotThreshold && !autoFire && burstShotsLeft > 0)
         {
             hasShot = true;
             shot.transform.localScale = new Vector3(localScale, localScale, localScale);
@@ -179,15 +179,32 @@ public class ChargedShotTest : MonoBehaviour
                 firedShot = null;
                 StartCoroutine(CountDown(shotCoolDown * 0.1f));
                 burstShotsLeft--;
-            } else
+            }
+            else
             {
                 burstTimer += Time.deltaTime;
                 if (burstTimer > timeBetweenBursts)
                 {
                     burstShotsLeft = numShotsInBurst;
                     burstTimer = 0;
+                    autoFire = false;
                 }
             }
+        }
+
+        if (shotSize >= minShotThreshold && !autoFire)
+        {
+            hasShot = true;
+            shot.transform.localScale = new Vector3(localScale, localScale, localScale);
+            shot.GetComponent<Rigidbody2D>().velocity = barrel.transform.up * shotSpeed;
+            firedShot = null;
+
+            if (firedShot == null)
+            {
+                //Do nothing here
+            }
+
+            StartCoroutine(CountDown(shotCoolDown));
         }
     }
 
