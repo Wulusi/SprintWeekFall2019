@@ -40,7 +40,7 @@ public class Zombie : MonoBehaviour
 
         if (isAtEnd)
         {
-            Vector2 nextNearestBase = Vector2.positiveInfinity;
+            Vector2 nextNearestBase = new Vector2(10000, 10000);
             for (int i = 0;i<zombieSpawnerInstance.baseTargets.Length; i++)
             {
                 if (zombieSpawnerInstance.baseTargets[i].activeSelf)
@@ -55,7 +55,7 @@ public class Zombie : MonoBehaviour
         }
 
         else dirToWalk = pathToFollow[targetPoint] - (Vector2)transform.position;
-        if (dirToWalk != Vector2.positiveInfinity) rb.velocity = Vector2.Lerp(rb.velocity, dirToWalk.normalized * walkSpd, 0.1f);
+        rb.velocity = Vector2.Lerp(rb.velocity, dirToWalk.normalized * walkSpd, 0.1f);
 
 
         if (Vector2.Distance(pathToFollow[targetPoint], transform.position) < 0.1f && !isAtEnd)
