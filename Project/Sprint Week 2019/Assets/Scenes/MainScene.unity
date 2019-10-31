@@ -849,6 +849,27 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1793328023490985388, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ec38843406d0dd648935ac895868c234,
+        type: 3}
+    - target: {fileID: 1793328023490985388, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.2971698
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793328023490985388, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.52923876
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793328023490985388, guid: 45ee159694e505a4fa400976f37df60b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2533428799610456239, guid: 45ee159694e505a4fa400976f37df60b,
         type: 3}
       propertyPath: m_SortingOrder
@@ -2055,7 +2076,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.84
+  orthographic size: 5.97
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2079,7 +2100,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105406034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.77, y: 4.76, z: -10}
+  m_LocalPosition: {x: 7.77, y: 5.95, z: -10}
   m_LocalScale: {x: 1.6571159, y: 1.6571159, z: 1.6571159}
   m_Children: []
   m_Father: {fileID: 0}

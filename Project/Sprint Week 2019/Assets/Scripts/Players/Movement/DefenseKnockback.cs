@@ -83,7 +83,7 @@ public class DefenseKnockback : MonoBehaviour
         knockbackSprite.color = new Color(knockbackSprite.color.r, knockbackSprite.color.g, knockbackSprite.color.b, 1.0f);
         while (tempTimer < cooldownTimer)
         {
-            knockbackObject.transform.localScale = new Vector2(Mathf.Lerp(0, expandRadius, expandTimer), Mathf.Lerp(0, expandRadius, expandTimer));
+            knockbackObject.transform.localScale = new Vector2(Mathf.Lerp(0, expandRadius * 0.08f, expandTimer * 0.08f), Mathf.Lerp(0, expandRadius * 0.08f, expandTimer * 0.08f));
             knockbackTimer.fillAmount = tempTimer / cooldownTimer;
             if (expandTimer<cooldownTimer/2) expandTimer += Time.deltaTime*10f;
             else
