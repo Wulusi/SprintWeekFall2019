@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using GamepadInput;
 
 public class ChargedShotTest : MonoBehaviour
@@ -8,7 +9,7 @@ public class ChargedShotTest : MonoBehaviour
     public GamePad.Index playerIndex;
     public Vector2 triggerIndex;
     public GameObject shot, firedShot;
-    public bool hasShot, autoFire;
+    public bool hasShot, autoFire, isCountDown;
     public Element currentElement;
     public Color elementColour;
     public sObj_WeaponParams weaponParams;
@@ -20,9 +21,10 @@ public class ChargedShotTest : MonoBehaviour
     public int numShotsInBurst;
     public int burstShotsLeft;
     public float timeBetweenBursts;
-    public float burstTimer;
+    public float burstTimer, minBurstTime, maxBurstTime;
     public Transform barrel;
 
+    public Image BurstCoolDown;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +50,9 @@ public class ChargedShotTest : MonoBehaviour
         minShotThreshold = weaponParams._minShotThreshold;
         shot = weaponParams.playerShot;
         elementColour = Color.yellow;
+        maxBurstTime = timeBetweenBursts;
+        BurstCoolDown = transform.GetChild(0).GetComponentInChildren<Image>();
+        isCountDown = false;
     }
 
 
@@ -98,7 +103,7 @@ public class ChargedShotTest : MonoBehaviour
             }
         }
 
-        if (triggerFloatLeft != 0 && triggerFloatRight <= 0)
+        if (triggerFloatLeft != 0 && triggerFloatRight <= 0 && burstShotsLeft > 0)
         {
             if (!hasShot)
             {
@@ -121,6 +126,23 @@ public class ChargedShotTest : MonoBehaviour
                     ShootShot(localScale, firedShot);
                 }
             }
+        }
+        else
+        {
+            if (!isCountDown)
+            {
+                isCountDown = true;
+                StartCoroutine(BurstCoolDownMeter(timeBetweenBursts));
+            }
+            //burstTimer += Time.deltaTime;
+
+            //if (burstTimer >= timeBetweenBursts)
+            //{
+
+            //    burstTimer = 0;
+
+            //    autoFire = false;
+            //}
         }
 
         if (triggerFloatLeft <= 0)
@@ -180,16 +202,6 @@ public class ChargedShotTest : MonoBehaviour
                 StartCoroutine(CountDown(shotCoolDown * 0.1f));
                 burstShotsLeft--;
             }
-            else
-            {
-                burstTimer += Time.deltaTime;
-                if (burstTimer > timeBetweenBursts)
-                {
-                    burstShotsLeft = numShotsInBurst;
-                    burstTimer = 0;
-                    autoFire = false;
-                }
-            }
         }
 
         if (shotSize >= minShotThreshold && !autoFire)
@@ -233,5 +245,27 @@ public class ChargedShotTest : MonoBehaviour
             yield return null;
         }
         autoFire = true;
+    }
+
+    private IEnumerator BurstCoolDownMeter(float coolDown)
+    {
+        float duration = coolDown;
+        float time = 0;
+
+        while (time <= duration)
+        {
+            time += Time.deltaTime;
+            //if (isCountDown)
+            //{
+            //    BurstCoolDown.fillAmount = time / duration;
+            //} else
+            //{
+            //    BurstCoolDown.fillAmount = 1f;
+            //}
+            yield return null;
+        }
+        burstShotsLeft = numShotsInBurst;
+        isCountDown = false;
+        autoFire = false;
     }
 }

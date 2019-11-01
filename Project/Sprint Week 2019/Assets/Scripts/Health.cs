@@ -9,11 +9,18 @@ public class Health : MonoBehaviour, ObjectInterface
     public float currentHealth;
     public GameObject owner;
     public float respawnTimer = 10f;
-    Vector3 startPos;
+    public Vector3 startPos, startingScale;
+
+    public AudioSource audioSource;
+    public AudioClip hurt, death;
+
+    public bool isNotTweening;
 
     void Start()
     {
         startPos = transform.position;
+        startingScale = this.gameObject.transform.localScale;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void TakeDamage(float dmg, Element type)
@@ -22,19 +29,77 @@ public class Health : MonoBehaviour, ObjectInterface
         {
             Debug.Log("Weakness Dmg!");
             currentHealth -= dmg * 2;
+            audioSource.PlayOneShot(hurt);
+            WeakDamageAnimation();
+            //ObjectAnimation();
         }
         else if (elementType.strongAgainst == type)
         {
             Debug.Log("Resist Dmg!");
             currentHealth -= dmg / 2;
+            audioSource.PlayOneShot(hurt);
+            ResistDamageAnimation();
+            ObjectAnimation();
         }
         else
         {
             Debug.Log("Normal Dmg!");
             currentHealth -= dmg;
+            audioSource.PlayOneShot(hurt);
+            DamageAnimation();
+            ObjectAnimation();
         }
         CheckDeath();
     }
+
+    public void DamageAnimation()
+    {
+        if (!isNotTweening)
+        {
+            iTween.ShakeScale(this.gameObject, new Vector2(Random.Range(1, 1.5f), Random.Range(1, 1.5f)), 0.5f);
+            this.gameObject.transform.localScale = startingScale;
+        }
+    }
+
+    public void ObjectAnimation()
+    {
+        if (isNotTweening && owner.gameObject.layer != LayerMask.NameToLayer("Obstacles"))
+        {
+            iTween.ShakeScale(this.gameObject, new Vector2(1.2f, 1.2f), 0.5f);
+            this.gameObject.transform.localScale = startingScale;
+        }
+    }
+
+    public void WeakDamageAnimation()
+    {
+        if (!isNotTweening)
+        {
+            iTween.ShakePosition(this.gameObject, new Vector2(Random.Range(1, 1.5f), Random.Range(1, 1.5f)), 0.5f);
+            this.gameObject.transform.localScale = startingScale;
+        }
+    }
+
+    public void ResistDamageAnimation()
+    {
+        if (!isNotTweening)
+        {
+            iTween.PunchRotation(this.gameObject, new Vector3(0,0,360), 0.5f);
+            this.gameObject.transform.localScale = startingScale;
+        }
+    }
+
+    public void DeathAnimation()
+    {
+        if (!isNotTweening && owner.gameObject.layer != LayerMask.NameToLayer("Players"))
+        {
+            Debug.Log("Dying");
+            //iTween.RotateBy(this.gameObject, new Vector3(0, 0, 10), 2.5f);
+            iTween.FadeTo(this.gameObject, 0, 2.5f);
+            iTween.ShakeScale(this.gameObject, new Vector2(Random.Range(1, 1.5f), Random.Range(1, 1.5f)), 0.5f);
+            this.gameObject.transform.localScale = startingScale;
+        }
+    }
+
 
     public void CheckDeath()
     {
@@ -42,9 +107,16 @@ public class Health : MonoBehaviour, ObjectInterface
         {
             //Destroy(owner);
             //replace this line for players
-            if (owner.gameObject.layer != LayerMask.NameToLayer("Players")) owner.gameObject.SetActive(false);
-            else StartCoroutine(Respawn());
+            DeathAnimation();
+            StartCoroutine(Death());
         }
+    }
+
+    IEnumerator Death()
+    {
+        yield return new WaitForSeconds(2.5f);
+        if (owner.gameObject.layer != LayerMask.NameToLayer("Players")) owner.gameObject.SetActive(false);
+        else StartCoroutine(Respawn());
     }
 
     IEnumerator Respawn()
@@ -94,10 +166,16 @@ public class Health : MonoBehaviour, ObjectInterface
         OnObjectSpawn();
     }
 
+    public void OnDisable()
+    {
+        if (this.gameObject.layer == LayerMask.NameToLayer("Players"))
+        {
+            this.gameObject.transform.localScale = startingScale;
+        }
+    }
     public void OnObjectSpawn()
     {
         currentHealth = maxHealth;
-
         if (GetComponent<Rigidbody2D>())
         {
             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;

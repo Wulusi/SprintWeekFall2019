@@ -92,6 +92,12 @@ MonoBehaviour:
   currentHealth: 15
   owner: {fileID: 1282958123816497461}
   respawnTimer: 10
+  startPos: {x: 0, y: 0, z: 0}
+  startingScale: {x: 0, y: 0, z: 0}
+  audioSource: {fileID: 0}
+  hurt: {fileID: 0}
+  death: {fileID: 0}
+  isNotTweening: 1
 --- !u!1 &8316173281532589035
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,7 +29,7 @@ public class EffectAoE : MonoBehaviour
         transform.GetChild(1).GetComponent<Transform>().localScale = new Vector3(ConvertedMarkerRadius, ConvertedMarkerRadius, ConvertedMarkerRadius);
 
         var transparentAoe = shotColour;
-        transparentAoe.a = 0.5f;
+        transparentAoe.a = 0.25f;
         transform.GetChild(1).GetComponent<SpriteRenderer>().color = transparentAoe;
     }
 
