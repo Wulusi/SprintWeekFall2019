@@ -246,9 +246,10 @@ MonoBehaviour:
   respawnTimer: 10
   startPos: {x: 0, y: 0, z: 0}
   startingScale: {x: 0, y: 0, z: 0}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 8539212945350359393}
   hurt: {fileID: 8300000, guid: 79b6741309b98104296a98f2bbcd9be9, type: 3}
-  death: {fileID: 0}
+  death: {fileID: 8300000, guid: c44c9076c9320214b8e0d181bcccc4f6, type: 3}
+  isNotTweening: 0
 --- !u!58 &8430057151150378069
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -277,7 +278,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.36
   m_Pitch: 1
   Loop: 0
   Mute: 0

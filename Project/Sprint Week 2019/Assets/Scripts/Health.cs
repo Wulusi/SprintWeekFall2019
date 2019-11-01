@@ -21,6 +21,7 @@ public class Health : MonoBehaviour, ObjectInterface
         startPos = transform.position;
         startingScale = this.gameObject.transform.localScale;
         audioSource = GetComponent<AudioSource>();
+        //audioSource.pitch = Random.Range(-1, 2);
     }
 
     public void TakeDamage(float dmg, Element type)
@@ -29,6 +30,7 @@ public class Health : MonoBehaviour, ObjectInterface
         {
             Debug.Log("Weakness Dmg!");
             currentHealth -= dmg * 2;
+            //audioSource.pitch = Random.Range(-1, 2);
             audioSource.PlayOneShot(hurt);
             WeakDamageAnimation();
             //ObjectAnimation();
@@ -37,17 +39,19 @@ public class Health : MonoBehaviour, ObjectInterface
         {
             Debug.Log("Resist Dmg!");
             currentHealth -= dmg / 2;
+            //audioSource.pitch = Random.Range(-1, 2);
             audioSource.PlayOneShot(hurt);
             ResistDamageAnimation();
-            ObjectAnimation();
+            //ObjectAnimation();
         }
         else
         {
             Debug.Log("Normal Dmg!");
             currentHealth -= dmg;
+            //audioSource.pitch = Random.Range(-1, 2);
             audioSource.PlayOneShot(hurt);
             DamageAnimation();
-            ObjectAnimation();
+            //ObjectAnimation();
         }
         CheckDeath();
     }
@@ -74,7 +78,7 @@ public class Health : MonoBehaviour, ObjectInterface
     {
         if (!isNotTweening)
         {
-            iTween.ShakePosition(this.gameObject, new Vector2(Random.Range(1, 1.5f), Random.Range(1, 1.5f)), 0.5f);
+            iTween.ShakePosition(this.gameObject, new Vector2(Random.Range(0, 0.5f), Random.Range(0, 0.5f)), 0.5f);
             this.gameObject.transform.localScale = startingScale;
         }
     }
@@ -107,6 +111,8 @@ public class Health : MonoBehaviour, ObjectInterface
         {
             //Destroy(owner);
             //replace this line for players
+            //audioSource.pitch = Random.Range(-1, 2);
+            audioSource.PlayOneShot(death);
             DeathAnimation();
             StartCoroutine(Death());
         }

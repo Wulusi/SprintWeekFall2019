@@ -42,7 +42,7 @@ Animator:
   m_GameObject: {fileID: 1990018372358759770}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 560bced2301d29140a8b274f23361de2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3b3c6083b89f2ed429f1332de3bf3155, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4496694502799656508, guid: 679ab9edae134464aaa509755ccad6c1,
+  m_Sprite: {fileID: -2207535862146048489, guid: 0e73ca03f8d5d2c4998f3a89b06c2e20,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -101,7 +101,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &3097871932047239720
+--- !u!1 &6161811417270048183
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,8 +109,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7503345440051743454}
-  - component: {fileID: 1854900777189675544}
+  - component: {fileID: 596551145012541723}
+  - component: {fileID: 6677176065411092494}
   m_Layer: 9
   m_Name: Collider
   m_TagString: Untagged
@@ -118,13 +118,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7503345440051743454
+--- !u!4 &596551145012541723
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3097871932047239720}
+  m_GameObject: {fileID: 6161811417270048183}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -132,13 +132,13 @@ Transform:
   m_Father: {fileID: 8430057151150378410}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1854900777189675544
+--- !u!58 &6677176065411092494
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3097871932047239720}
+  m_GameObject: {fileID: 6161811417270048183}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -161,9 +161,9 @@ GameObject:
   - component: {fileID: 8430057151150378409}
   - component: {fileID: 215374618432682147}
   - component: {fileID: 8430057151150378069}
-  - component: {fileID: 3447145673589150380}
+  - component: {fileID: 4794199974293099551}
   m_Layer: 9
-  m_Name: GhostPrefab
+  m_Name: PumpkinPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ Transform:
   m_Children:
   - {fileID: 5827338657535053827}
   - {fileID: 7209593010605652727}
-  - {fileID: 7503345440051743454}
+  - {fileID: 596551145012541723}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -239,16 +239,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67c6d7b5976eeb441a018a22953db34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementType: {fileID: 11400000, guid: dc12a88eedc87ad48ba618015e042a34, type: 2}
+  elementType: {fileID: 11400000, guid: 98d5f4804c4d41740a12bdf4ef7c7a15, type: 2}
   maxHealth: 6
   currentHealth: 6
   owner: {fileID: 8430057151150378414}
   respawnTimer: 10
   startPos: {x: 0, y: 0, z: 0}
   startingScale: {x: 0, y: 0, z: 0}
-  audioSource: {fileID: 0}
-  hurt: {fileID: 8300000, guid: 60524dd0d20d4774bb9b1aa88fa91296, type: 3}
-  death: {fileID: 0}
+  audioSource: {fileID: 4794199974293099551}
+  hurt: {fileID: 8300000, guid: 49d56c131a4435a4c956f8e7f55b38e3, type: 3}
+  death: {fileID: 8300000, guid: b6b6f78cc8f70134daaf370a539c455d, type: 3}
+  isNotTweening: 0
 --- !u!58 &8430057151150378069
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -265,7 +266,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.08
---- !u!82 &3447145673589150380
+--- !u!82 &4794199974293099551
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,7 +278,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.36
   m_Pitch: 1
   Loop: 0
   Mute: 0

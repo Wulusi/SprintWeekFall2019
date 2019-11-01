@@ -159,10 +159,10 @@ MonoBehaviour:
   lastMoveDir: {x: 0, y: 0}
   aimDir: {x: 0, y: 0}
   lastAimDir: {x: 0, y: 0}
-  maxSpeed: 1
+  maxSpeed: 2
   currentSpeed: 0
-  accelTime: 1
-  decelTime: 0.1
+  accelTime: 1.5
+  decelTime: 0.25
   isStarting: 0
   isStopping: 0
 --- !u!114 &3209026215713152155
@@ -380,8 +380,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2902184069844150324}
   - {fileID: 6658177244686694657}
+  - {fileID: 2902184069844150324}
   - {fileID: 8047247319325678827}
   m_Father: {fileID: 2887254870734219003}
   m_RootOrder: 0
@@ -410,7 +410,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &2902184068337857809
 MonoBehaviour:
@@ -494,7 +494,7 @@ RectTransform:
   m_LocalScale: {x: 0.013105167, y: 0.013105167, z: 0.013105167}
   m_Children: []
   m_Father: {fileID: 2902184068337857815}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -721,7 +721,7 @@ RectTransform:
   m_LocalScale: {x: 0.00263128, y: 0.00263128, z: 0.00263128}
   m_Children: []
   m_Father: {fileID: 2902184068337857815}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
